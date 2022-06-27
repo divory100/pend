@@ -1,0 +1,7 @@
+- main page basic html/css
+- sticky navbar
+- slideshow
+- bootstrap? !IMPORTANT! - yes
+- login (php?); uploading
+- security?
+- hosting - nginx/apache -> aws/specific website hoster

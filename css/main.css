@@ -2,27 +2,10 @@ body {
   font-family: sans-serif; /*NOTE: discuss later*/
 }
 
-@media screen and (max-width: 800px) { /*to make it responsive to the user resizing the page*/
-  .column-left, .column-right {
-    width: 100%;
-    padding: 0;
-  }
-}
-
-.sidebar-card {
-  float: left;
-  width: 25%;
-  border-style: solid;
-  border-width: 1px;
-  margin: auto;
-  padding: 10px;
-}
-
 .card {
+  text-align: center;
+}
+
+.card-column {
   float: left;
-  width: 75%;
-  border-style: solid;
-  border-width: 1px;
-  margin: auto;
-  padding: 10px;
 }

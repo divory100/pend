@@ -5,3 +5,6 @@
 - login (php?); uploading
 - security?
 - hosting - nginx/apache -> aws/specific website hoster
+- fixed sidebars?
+- endless homepage feed?
+- global vars

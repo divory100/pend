@@ -41,3 +41,26 @@ nav .navbar-nav li a{
   background-color: black;
   text-align: center;
 }
+
+#content-container {
+  width: 80%;
+}
+
+
+/*Adjust content container to full width when sidebar is hidden*/
+@media (max-width: 1200px) {
+  #content-container {
+      width: 100%;
+  }
+}
+
+.sidebar {
+  /*border-style: solid;
+  border-color: black;
+  border-width: 1px;*/
+  background-color: rgb(231, 231, 231);
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin: 4px;
+}

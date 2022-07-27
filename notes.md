@@ -1,4 +1,64 @@
-# Notes for setting up the webserver
+## OPTION 1: LAMP STACK
+LAMP: Linux, Apache, MySQL, PHP
+
+## 1. Components
+- Apache (apache)
+- PHP (php, php-apache)
+- MySQL (MariaDB (mariadb, mariadb-clients, libmariadbclient))
+
+systemd services `mysqld` and `httpd` are used
+
+## 2. Apache setup
+1. install apache
+2. open /etc/httpd/conf/httpd.conf and uncomment `LoadModule unique_id_module modules/mod_unique_id.so`
+
+IMPORTANT: the webserver content should be put in /srv/http/
+
+## 3. PHP setup
+1. install php and php-apache
+2. add 
+```sh
+Include conf/extra/php_module.conf
+LoadModule php_module modules/libphp.so
+AddType application/x-httpd-php .php
+PHPIniDir /etc/php/
+```
+    to /etc/httpd/conf/httpd.conf
+
+3. Edit these lines in httpd.conf to look like this:
+```sh
+#LoadModule mpm_event_module modules/mod_mpm_event.so
+LoadModule mpm_prefork_module modules/mod_mpm_prefork.so
+#LoadModule mpm_worker_module modules/mod_mpm_worker.so
+```
+
+IMPORTANT: this fixes apache complaining about threadsafe php not being available to it, which is fine for testing, but in production we may want to compile php with support for it
+in that case, make sure mpm_worker_module and mpm_event_module are uncommented
+
+4. (maybe) add `short_open_tag = On` to /etc/php/php.ini
+
+5. uncomment `;extension=mysqli` in /etc/php/php.ini
+   NOTE: it may be `extension=php_mysql.dll` AND `extension=php_mysqli.dll` instead
+
+## 4. SQL/database setup
+1. install mariadb 
+2. run `mysql_install_db` with `--user`, `--basedir`, `--datadir`
+3. run `mysql_secure_installation` (optional, for adding root password and whatever)
+4. run `mysql -u root`, then `FLUSH PRIVILEGES;` then `SET PASSWORD FOR 'root'@'localhost' = PASSWORD('<whatever>');`
+4. set to either start at boot (by `systemctl enable`-ing mysqld) or add it to a webserver start script
+
+`mysql -u root -p` is a useful command.
+
+## 5. useful urls
+- https://www.linode.com/docs/guides/how-to-install-a-lamp-stack-on-arch-linux/ (arch-based) (ignore, im just using this for testing)
+- https://www.linux.com/training-tutorials/easy-lamp-server-installation/ (debian-based)
+- https://dbschema.com/2020/04/21/mysql-default-username-password/
+- https://stackoverflow.com/questions/39281594/error-1698-28000-access-denied-for-user-rootlocalhost
+- https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-arch-linux
+- https://stackoverflow.com/questions/60370020/apache-is-running-a-threaded-mpm-but-your-php-module-is-not-compiled-to-be-thre
+
+
+# OPTION 2: NGINX
 
 ## 1. nginx configuration
 currently (as of 8/7/2022) just using nginx.conf for testing.

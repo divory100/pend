@@ -1,0 +1,88 @@
+/*
+
+Homepage news item styles
+Contains styles for columns and item groups, along with items themselves
+Including specific margin styles for middle elements
+
+Last updated 27/7/2022
+
+*/
+
+
+/*holder for item groups*/
+.column {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    margin: 4px;
+}
+
+/*Small and large columns (standard is double small's width)
+These sizings mean nothing if there is only one column*/
+.c-small {
+    flex: 1;
+}
+
+.c-large {
+    flex: 3;
+}
+
+/*All items must be in an item group, even if they hold only one item.*/
+.item-group {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+.ig-vert {
+    flex-direction: column;
+}
+
+.item {
+    background-color: white;
+    border: solid #dbdbdb 1px;
+    flex: 2;
+}
+
+/*Margins for middle items in horizontal item groups
+naming style: <orientation>mid-<num items>[-<side>] eg. vmid-2-l*/
+.hmid-2-l { /*2 item group left middle*/
+    margin-right: 8px;
+}
+
+.hmid-3 { /*3 item group*/
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.hmid-4-l { /*4 item group left middle*/
+    margin-left: 8px;
+    margin-right: 4px;
+}
+
+.hmid-4-r {
+    margin-left: 4px;
+    margin-right: 8px;
+}
+
+/*Margins for middle items in vertical groups*/
+.vmid-2-t { /*2 item group top middle*/
+    margin-bottom: 8px;
+}
+
+.vmid-3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.vmid-4-t { /*4 item group top middle*/
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+.vmid-4-b {
+    margin-top: 4px;
+    margin-bottom: 8px;
+}

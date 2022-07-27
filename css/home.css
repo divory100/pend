@@ -1,0 +1,63 @@
+/*
+
+Main styles for the homepage
+i.e. page-wide feature bars for holding items
+
+Last updated 27/7/2022
+
+*/
+
+
+/*Feature section borders*/
+#articles {
+    border-top: solid #0D6EFD 4px;
+    border-left: solid #0D6EFD 1px;
+    border-right: solid #0D6EFD 1px;
+}
+
+#podcasts {
+    border-top: solid #0DCAF0 4px;
+    border-left: solid #0DCAF0 1px;
+    border-right: solid #0DCAF0 1px;
+}
+
+#photos {
+    border-top: solid #FFC107 4px;
+    border-left: solid #FFC107 1px;
+    border-right: solid #FFC107 1px;
+}
+
+#videos {
+    border-top: solid blueviolet 4px;
+    border-left: solid blueviolet 1px;
+    border-right: solid blueviolet 1px;
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    flex: 1;
+    margin-top: 8px;
+}
+
+/*sidebar section title*/
+.s-title { 
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+/*hide sidebar when screen is under certain width*/
+@media (max-width: 1300px) {
+    .sidebar {
+        display:none;
+    }
+  }
+
+/*holder for columns. There is one for articles, podcasts, photos, and videos*/
+.feature {
+    display: flex;
+}

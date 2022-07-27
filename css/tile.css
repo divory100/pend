@@ -1,15 +1,15 @@
 /*
 
-Homepage news item styles
-Contains styles for columns and item groups, along with items themselves
-Including specific margin styles for middle elements
+Homepage tile styles
+Contains styles for columns and tile groups, along with tiles themselves
+Including specific margin styles for middle tiles
 
 Last updated 27/7/2022
 
 */
 
 
-/*holder for item groups*/
+/*holder for tile groups*/
 .column {
     display: flex;
     flex-direction: column;
@@ -27,8 +27,8 @@ These sizings mean nothing if there is only one column*/
     flex: 3;
 }
 
-/*All items must be in an item group, even if they hold only one item.*/
-.item-group {
+/*All tiles must be in an tile group, even if they hold only one tile.*/
+.tile-group {
     display: flex;
     flex: 1;
     justify-content: center;
@@ -36,28 +36,28 @@ These sizings mean nothing if there is only one column*/
     margin-top: 4px;
 }
 
-.ig-vert {
+.tg-vert {
     flex-direction: column;
 }
 
-.item {
+.tile {
     background-color: white;
     border: solid #dbdbdb 1px;
     flex: 2;
 }
 
-/*Margins for middle items in horizontal item groups
-naming style: <orientation>mid-<num items>[-<side>] eg. vmid-2-l*/
-.hmid-2-l { /*2 item group left middle*/
+/*Margins for middle tiles in horizontal tile groups
+naming style: <orientation>mid-<num tiles>[-<side>] eg. vmid-2-l*/
+.hmid-2-l { /*2 tile group left middle*/
     margin-right: 8px;
 }
 
-.hmid-3 { /*3 item group*/
+.hmid-3 { /*3 tile group*/
     margin-left: 8px;
     margin-right: 8px;
 }
 
-.hmid-4-l { /*4 item group left middle*/
+.hmid-4-l { /*4 tile group left middle*/
     margin-left: 8px;
     margin-right: 4px;
 }
@@ -67,8 +67,8 @@ naming style: <orientation>mid-<num items>[-<side>] eg. vmid-2-l*/
     margin-right: 8px;
 }
 
-/*Margins for middle items in vertical groups*/
-.vmid-2-t { /*2 item group top middle*/
+/*Margins for middle tiles in vertical groups*/
+.vmid-2-t { /*2 tile group top middle*/
     margin-bottom: 8px;
 }
 
@@ -77,7 +77,7 @@ naming style: <orientation>mid-<num items>[-<side>] eg. vmid-2-l*/
     margin-bottom: 8px;
 }
 
-.vmid-4-t { /*4 item group top middle*/
+.vmid-4-t { /*4 tile group top middle*/
     margin-top: 8px;
     margin-bottom: 4px;
 }

@@ -1,4 +1,4 @@
-
+<?php require_once( 'couch/cms.php' ); ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -155,3 +155,4 @@
 
     </body>
 </html>
+<?php COUCH::invoke(); ?>

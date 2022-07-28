@@ -11,6 +11,7 @@ systemd services `mysqld` and `httpd` are used
 ## 2. Apache setup
 1. install apache
 2. open /etc/httpd/conf/httpd.conf and uncomment `LoadModule unique_id_module modules/mod_unique_id.so`
+3. Find `DirectoryIndex index.html` in /etc/httpd/conf/httpd.conf and change it to `DirectoryIndex index.html index.php`
 
 IMPORTANT: the webserver content should be put in /srv/http/
 
@@ -111,6 +112,7 @@ add `fastcgi_pass unix:/var/run/php-fpm/php-fpm.sock;` under location ~ \.php$ {
 
 
 ## 3. CouchCMS setup
+See http://docs.couchcms.com/tutorials/portfolio-site.html
 
 ## 4. Other options than CouchCMS
 - wordpress: https://www.nginx.com/resources/wiki/start/topics/recipes/wordpress/

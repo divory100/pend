@@ -12,3 +12,4 @@
 - [ ] podcasts page: not started
 - [ ] photos page: not started
 - [ ] videos page: not started
+- [ ] IMPORTANT: deal with pretty urls

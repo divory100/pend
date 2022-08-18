@@ -1,4 +1,5 @@
 <?php require_once( 'couch/cms.php' ); ?>
+<cms:template title="Homepage" />
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,11 +24,11 @@
       
         <nav role="navigation" style="top:60px;" class="navbar navbar-expand-sm fixed-top justify-content-center custom-nav">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="articles.html">Articles</a></li>
-                <li class="nav-item"><a class="nav-link" href="podcasts.html">Podcasts</a></li>
-                <li class="nav-item"><a class="nav-link" href="photos.html">Photos</a></li>
-                <li class="nav-item"><a class="nav-link" href="videos.html">Videos</a></li>
+                <li class="nav-item"><a class="nav-link active" href="index.php">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="articles.php">Articles</a></li>
+                <li class="nav-item"><a class="nav-link" href="podcasts.php">Podcasts</a></li>
+                <li class="nav-item"><a class="nav-link" href="photos.php">Photos</a></li>
+                <li class="nav-item"><a class="nav-link" href="videos.php">Videos</a></li>
             </ul>
         </nav>
       

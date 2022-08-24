@@ -39,26 +39,102 @@
                 
             </div>
 
-            <div class="feature" style="height:500px;flex:6">
+            <div class="feature" style="flex:6">
                 <div class="column c-large">
                     <div class="tile-group">
-                        <div class="tile">tile</div>
+                        <a class="card tile" href="https://duckduckgo.com">
+                            <img class="card-img-top" src="assets/large.png">
+                            <div class="card-img-overlay bg-overlay">
+                                <h4 class="card-title">Scientists prove that every 60 seconds, 1 minute passes</h4>
+                                <span class="badge bg-danger">News & Factual</span>
+                                <span class="badge bg-secondary">Science</span>
+                                <p class="card-text">24/08/22 &#8226; by <i>Kool Kid</i></p>
+                            </div>
+                        </a>
                     </div>
                     <div class="tile-group">
-                        <div class="tile">tile</div>
-                        <div class="tile hmid-3">tile</div>
-                        <div class="tile">tile</div>
+                        <a class="card tile" href="https://duckduckgo.com">
+                            <img class="card-img-top" src="assets/medium.jpg">
+                            <div class="card-img-overlay bg-overlay">
+                                <h4 class="card-title">Is water wet?</h4>
+                                <span class="badge bg-primary">Opinion</span>
+                                <span class="badge bg-secondary">Controversial</span>
+                                <p class="card-text">24/08/22 &#8226; by <i>Kool Kid</i></p>
+                            </div>
+                        </a>
+                        <a class="card tile hmid-3" href="https://duckduckgo.com">
+                            <img class="card-img-top" src="assets/medium2.jpg">
+                            <div class="card-img-overlay bg-overlay">
+                                <h4 class="card-title">It: Chapter 2</h4>
+                                <span class="badge bg-success">Creative</span>
+                                <p class="card-text">24/08/22 &#8226; by <i>Kool Kid</i></p>
+                            </div>
+                        </a>
+                        <a class="card tile" href="https://duckduckgo.com">
+                            <img class="card-img-top" src="assets/medium.jpg">
+                            <div class="card-img-overlay bg-overlay">
+                                <h4 class="card-title">How long is a piece of string?</h4>
+                                <span class="badge bg-primary">Opinion</span>
+                                <p class="card-text">24/08/22 &#8226; by <i>Kool Kid</i></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="tile-group">
+                        <a class="card tile hmid-2-l" href="https://duckduckgo.com">
+                            <img class="card-img-top" src="assets/large.png">
+                            <div class="card-img-overlay bg-overlay">
+                                <h4 class="card-title">War and Peace</h4>
+                                <span class="badge bg-success">Creative</span>
+                                <span class="badge bg-secondary">Boring</span>
+                                <p class="card-text">24/08/22 &#8226; by <i>Kool Kid</i></p>
+                            </div>
+                        </a>
+                        <a class="card tile" href="https://duckduckgo.com">
+                            <img class="card-img-top" src="assets/medium3.jpg">
+                            <div class="card-img-overlay bg-overlay">
+                                <h4 class="card-title">Crime and Punishment</h4>
+                                <span class="badge bg-success">Creative</span>
+                                <p class="card-text">24/08/22 &#8226; by <i>Kool Kid</i></p>
+                            </div>
+                        </a>
                     </div>
                 </div>
     
                 <div class="column c-small">
                     <div class="tile-group">
-                        <div class="tile">tile</div>
+                        <a class="card tile" href="https://duckduckgo.com">
+                            <img class="card-img-top" src="assets/medium.jpg">
+                            <div class="card-img-overlay bg-overlay">
+                                <h4 class="card-title">What happens if Pinocchio says 'My nose will grow'?</h4>
+                                <span class="badge bg-primary">Opinion</span>
+                                <p class="card-text">24/08/22 &#8226; by <i>Kool Kid</i></p>
+                            </div>
+                        </a>
                     </div>
                     <div class="tile-group tg-vert">
-                        <div class="tile">tile</div>
-                        <div class="tile vmid-3">tile</div>
-                        <div class="tile">tile</div>
+                        <a class="card tile" href="https://duckduckgo.com">
+                            <span class="badge bg-danger">News & Factual</span>
+                            <div class="card-footer">Small news story</div>
+                        </a>
+                        <a class="card tile vmid-3" href="https://duckduckgo.com">
+                            <span class="badge bg-primary">Opinion</span>
+                            <div class="card-footer">Small opinion piece</div>
+                        </a>
+                        <a class="card tile" href="https://duckduckgo.com">
+                            <span class="badge bg-danger">News & Factual</span>
+                            <div class="card-footer">Small news story</div>
+                        </a>
+                    </div>
+                    <div class="tile-group">
+                        <a class="card tile" href="https://duckduckgo.com">
+                            <img class="card-img-top" src="assets/an225.webp">
+                            <div class="card-img-overlay bg-overlay">
+                                <h4 class="card-title">What came first - the chicken or the egg?</h4>
+                                <span class="badge bg-primary">Opinion</span>
+                                <span class="badge bg-secondary">Science</span>
+                                <p class="card-text">24/08/22 &#8226; by <i>Kool Kid</i></p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -73,24 +149,53 @@
                 
             </div>
 
-            <div class="feature" style="height:500px;flex:6">
+            <div class="feature" style="flex:6">
                 <div class="column">
                     <div class="tile-group">
-                        <div class="tile">tile</div>
+                        <a class="card tile" href="https://duckduckgo.com">
+                            <img class="card-img-top" src="assets/large.png">
+                            <div class="card-img-overlay bg-overlay">
+                                <h4 class="card-title">kool podcast</h4>
+                                <span class="badge bg-primary">Opinion</span>
+                                <span class="badge bg-secondary">we live in a society</span>
+                                <p class="card-text">Episode 3</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="tile-group">
-                        <div class="tile hmid-2-l">tile</div>
-                        <div class="tile">tile</div>
+                        <a class="card tile" href="https://duckduckgo.com">
+                            <img class="card-img-top" src="assets/medium3.jpg">
+                            <div class="card-img-overlay bg-overlay">
+                                <h4 class="card-title">kooler podcast</h4>
+                                <span class="badge bg-primary">Opinion</span>
+                                <p class="card-text">Episode 5</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
     
                 <div class="column">
                     <div class="tile-group">
-                        <div class="tile">tile</div>
+                        <a class="card tile" href="https://duckduckgo.com">
+                            <img class="card-img-top" src="assets/an225.webp">
+                            <div class="card-img-overlay bg-overlay">
+                                <h4 class="card-title">koolest podcast</h4>
+                                <span class="badge bg-primary">Opinion</span>
+                                <span class="badge bg-secondary">Aviation</span>
+                                <p class="card-text">Episode 1</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="tile-group">
-                        <div class="tile hmid-2-l">tile</div>
-                        <div class="tile">tile</div>
+                        <a class="card tile" href="https://duckduckgo.com">
+                            <img class="card-img-top" src="assets/medium2.jpg">
+                            <div class="card-img-overlay bg-overlay">
+                                <h4 class="card-title">bad podcast</h4>
+                                <span class="badge bg-danger">News & Factual</span>
+                                <span class="badge bg-secondary">Science</span>
+                                <p class="card-text">Episode 43</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>

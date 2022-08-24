@@ -14,6 +14,6 @@
     </body>
 </html>
 <cms:else />
-    <cms:embed 'articles.php' />
+    <cms:embed 'articles_list.php' />
 </cms:if>
 <?php COUCH::invoke(); ?>

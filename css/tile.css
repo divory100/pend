@@ -40,10 +40,70 @@ These sizings mean nothing if there is only one column*/
     flex-direction: column;
 }
 
+/*tg-vert styles: small vertical group tiles are too small for a picture, and remove border radius for badges*/
+.tg-vert .tile {
+    height: 100%;
+    background-color: rgb(66, 66, 66);
+}
+
+.tg-vert .badge {
+    border-radius: 0;
+}
+
+
+/*the core building block: any article/podcast/album/video on the homepage must be a tile*/
 .tile {
     background-color: white;
     border: solid #dbdbdb 1px;
     flex: 2;
+    overflow: hidden;
+    height:200px;
+    color:white;
+    font-family: courier;
+    display:block;
+    text-decoration: none;
+}
+
+/*Add a dark tint over the image to ensure all text is readable*/
+.bg-overlay {
+    background-position: 0px 0px;
+    background: linear-gradient(to right,
+        #FFFFFF00 0px,     
+        #FFFFFF00 5px,  
+        #00000088 5px,   
+        #00000077 100% 
+    );  
+}
+
+/*old version that doesnt allow for side borders, may reuse later
+.bg-overlay {
+    background: linear-gradient(50deg, #00000088 100%, #ffffff44 100%);
+}
+*/
+
+/*img that sits in tiles*/
+.card-img-top {
+    border-left: solid #0D6EFD 5px;
+    max-height:100%;
+    width:100%;
+    overflow: hidden;
+    object-fit:cover;
+    height:200px;
+}
+
+/*increase tile size slightly when hovered*/
+.tile:hover {
+    -ms-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -o-transform: scale(1.03);
+    transform: scale(1.03);
+    color:white;
+}
+
+/*increase card img border width when tile is hovered to eliminate gap*/
+.tile:hover > .card-img-top {
+    border-left: solid #0D6EFD 6px;
 }
 
 /*Margins for middle tiles in horizontal tile groups
@@ -73,8 +133,8 @@ naming style: <orientation>mid-<num tiles>[-<side>] eg. vmid-2-l*/
 }
 
 .vmid-3 {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 .vmid-4-t { /*4 tile group top middle*/

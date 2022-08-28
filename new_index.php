@@ -102,15 +102,15 @@
     
                 <div class="column c-small">
                     <div class="tile-group">
-                        <a class="card tile" style="height:408px;" href="https://duckduckgo.com">
-                            <img class="card-img-top" src="assets/medium.jpg" style="height:408px;">
+                        <a class="card tile" href="https://duckduckgo.com">
+                            <img class="card-img-top" src="assets/medium.jpg">
                             <div class="card-img-overlay bg-overlay">
                                 <h4 class="card-title">What happens if Pinocchio says 'My nose will grow'?</h4>
                                 <span class="badge bg-primary">Opinion</span>
                                 <p class="card-text">24/08/22 &#8226; by <i>Kool Kid</i></p>
                             </div>
                         </a>
-                    </div><!--
+                    </div>
                     <div class="tile-group tg-vert">
                         <a class="card tile" href="https://duckduckgo.com">
                             <span class="badge bg-danger">News & Factual</span>
@@ -124,7 +124,7 @@
                             <span class="badge bg-danger">News & Factual</span>
                             <div class="card-footer">Small news story</div>
                         </a>
-                    </div>-->
+                    </div>
                     <div class="tile-group">
                         <a class="card tile" href="https://duckduckgo.com">
                             <img class="card-img-top" src="assets/an225.webp">

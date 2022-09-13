@@ -13,6 +13,7 @@ Last updated 27/7/2022
 
 nav .navbar-nav li a{
     color: black !important;
+    font-family: courier;
 }
   
 .navbar {
@@ -30,4 +31,14 @@ nav .navbar-nav li a{
     color: white;
     background-color: black;
     text-align: center;
+}
+
+/*make nav item text bold and big when hover*/
+.nav-item a:hover {
+    -ms-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -o-transform: scale(1.03);
+    transform: scale(1.03);
+    font-weight: bold;
 }

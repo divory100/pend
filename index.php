@@ -19,7 +19,7 @@
     </head>
     <body>
         <div class="pagewide p-1 fixed-top">
-            <div class="container"><h1>PLACEHOLDER</h1></div>
+            <div class="container"><h1 style="font-family: courier">PEND</h1></div>
         </div>
       
         <nav role="navigation" style="top:60px;" class="navbar navbar-expand-sm fixed-top justify-content-center custom-nav">
@@ -45,10 +45,10 @@
                         <a class="card tile" href="https://duckduckgo.com">
                             <img class="card-img-top" src="assets/large.png">
                             <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">Scientists prove that every 60 seconds, 1 minute passes</h4>
+                                <h4 class="card-title">Test long news article</h4>
                                 <span class="badge bg-danger">News & Factual</span>
                                 <span class="badge bg-secondary">Science</span>
-                                <p class="card-text">24/08/22 &#8226; by <i>Kool Kid</i></p>
+                                <p class="card-text">13/9/22 &#8226; by <i>Some One</i></p>
                             </div>
                         </a>
                     </div>
@@ -56,26 +56,26 @@
                         <a class="card tile" href="https://duckduckgo.com">
                             <img class="card-img-top" src="assets/medium.jpg">
                             <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">Is water wet?</h4>
+                                <h4 class="card-title">Test opinion piece</h4>
                                 <span class="badge bg-primary">Opinion</span>
                                 <span class="badge bg-secondary">Controversial</span>
-                                <p class="card-text">24/08/22 &#8226; by <i>Kool Kid</i></p>
+                                <p class="card-text">13/9/22 &#8226; by <i>Some One</i></p>
                             </div>
                         </a>
                         <a class="card tile hmid-3" href="https://duckduckgo.com">
                             <img class="card-img-top" src="assets/medium2.jpg">
                             <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">It: Chapter 2</h4>
+                                <h4 class="card-title">Test creative writing</h4>
                                 <span class="badge bg-success">Creative</span>
-                                <p class="card-text">24/08/22 &#8226; by <i>Kool Kid</i></p>
+                                <p class="card-text">13/9/22 &#8226; by <i>Some One</i></p>
                             </div>
                         </a>
                         <a class="card tile" href="https://duckduckgo.com">
                             <img class="card-img-top" src="assets/medium.jpg">
                             <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">How long is a piece of string?</h4>
+                                <h4 class="card-title">Test opinion piece</h4>
                                 <span class="badge bg-primary">Opinion</span>
-                                <p class="card-text">24/08/22 &#8226; by <i>Kool Kid</i></p>
+                                <p class="card-text">13/9/22 &#8226; by <i>Some One</i></p>
                             </div>
                         </a>
                     </div>
@@ -83,18 +83,18 @@
                         <a class="card tile hmid-2-l" href="https://duckduckgo.com">
                             <img class="card-img-top" src="assets/large.png">
                             <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">War and Peace</h4>
+                                <h4 class="card-title">Test creative writing piece</h4>
                                 <span class="badge bg-success">Creative</span>
-                                <span class="badge bg-secondary">Boring</span>
-                                <p class="card-text">24/08/22 &#8226; by <i>Kool Kid</i></p>
+                                <span class="badge bg-secondary">test category</span>
+                                <p class="card-text">13/9/22 &#8226; by <i>Some One</i></p>
                             </div>
                         </a>
                         <a class="card tile" href="https://duckduckgo.com">
                             <img class="card-img-top" src="assets/medium3.jpg">
                             <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">Crime and Punishment</h4>
+                                <h4 class="card-title">a long story</h4>
                                 <span class="badge bg-success">Creative</span>
-                                <p class="card-text">24/08/22 &#8226; by <i>Kool Kid</i></p>
+                                <p class="card-text">13/9/22 &#8226; by <i>Some One</i></p>
                             </div>
                         </a>
                     </div>
@@ -107,7 +107,7 @@
                             <div class="card-img-overlay bg-overlay">
                                 <h4 class="card-title">What happens if Pinocchio says 'My nose will grow'?</h4>
                                 <span class="badge bg-primary">Opinion</span>
-                                <p class="card-text">24/08/22 &#8226; by <i>Kool Kid</i></p>
+                                <p class="card-text">13/9/22 &#8226; by <i>Some One</i></p>
                             </div>
                         </a>
                     </div><!--
@@ -127,12 +127,12 @@
                     </div>-->
                     <div class="tile-group">
                         <a class="card tile" href="https://duckduckgo.com">
-                            <img class="card-img-top" src="assets/an225.webp">
+                            <img class="card-img-top" src="assets/medium.jpg">
                             <div class="card-img-overlay bg-overlay">
                                 <h4 class="card-title">What came first - the chicken or the egg?</h4>
                                 <span class="badge bg-primary">Opinion</span>
                                 <span class="badge bg-secondary">Science</span>
-                                <p class="card-text">24/08/22 &#8226; by <i>Kool Kid</i></p>
+                                <p class="card-text">13/9/22 &#8226; by <i>Some One</i></p>
                             </div>
                         </a>
                     </div>
@@ -155,9 +155,9 @@
                         <a class="card tile" href="https://duckduckgo.com">
                             <img class="card-img-top" src="assets/large.png">
                             <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">kool podcast</h4>
+                                <h4 class="card-title">test podcast</h4>
                                 <span class="badge bg-primary">Opinion</span>
-                                <span class="badge bg-secondary">we live in a society</span>
+                                <span class="badge bg-secondary">test category</span>
                                 <p class="card-text">Episode 3</p>
                             </div>
                         </a>
@@ -166,7 +166,7 @@
                         <a class="card tile" href="https://duckduckgo.com">
                             <img class="card-img-top" src="assets/medium3.jpg">
                             <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">kooler podcast</h4>
+                                <h4 class="card-title">test podcast 2</h4>
                                 <span class="badge bg-primary">Opinion</span>
                                 <p class="card-text">Episode 5</p>
                             </div>
@@ -177,11 +177,11 @@
                 <div class="column">
                     <div class="tile-group">
                         <a class="card tile" href="https://duckduckgo.com">
-                            <img class="card-img-top" src="assets/an225.webp">
+                            <img class="card-img-top" src="assets/medium.jpg">
                             <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">koolest podcast</h4>
+                                <h4 class="card-title">test podcast 3</h4>
                                 <span class="badge bg-primary">Opinion</span>
-                                <span class="badge bg-secondary">Aviation</span>
+                                <span class="badge bg-secondary">another category</span>
                                 <p class="card-text">Episode 1</p>
                             </div>
                         </a>
@@ -190,7 +190,7 @@
                         <a class="card tile" href="https://duckduckgo.com">
                             <img class="card-img-top" src="assets/medium2.jpg">
                             <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">bad podcast</h4>
+                                <h4 class="card-title">test podcast 4</h4>
                                 <span class="badge bg-danger">News & Factual</span>
                                 <span class="badge bg-secondary">Science</span>
                                 <p class="card-text">Episode 43</p>
@@ -210,24 +210,37 @@
                 
             </div>
 
-            <div class="feature" style="height:250px;flex:6">
+            <div class="feature" style="flex:6">
                 <div class="column">
                     <div class="tile-group">
-                        <div class="tile">tile</div>
+                        <a class="card tile" href="https://duckduckgo.com">
+                            <img class="card-img-top" src="assets/medium2.jpg">
+                            <div class="card-img-overlay bg-overlay">
+                                <h4 class="card-title">album</h4>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
-                <div class="column c-small">
-                    <div class="tile-group tg-vert">
-                        <div class="tile vmid-2-t">tile</div>
-                        <div class="tile">tile</div>
+                <div class="column">
+                    <div class="tile-group">
+                        <a class="card tile" href="https://duckduckgo.com">
+                            <img class="card-img-top" src="assets/medium.jpg">
+                            <div class="card-img-overlay bg-overlay">
+                                <h4 class="card-title">album 2</h4>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
-                <div class="column c-small">
-                    <div class="tile-group tg-vert">
-                        <div class="tile vmid-2-t">tile</div>
-                        <div class="tile">tile</div>
+                <div class="column">
+                    <div class="tile-group">
+                        <a class="card tile" href="https://duckduckgo.com">
+                            <img class="card-img-top" src="assets/large.png">
+                            <div class="card-img-overlay bg-overlay">
+                                <h4 class="card-title">another album</h4>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -242,13 +255,48 @@
                 
             </div>
 
-            <div class="feature" style="height:250px;flex:6">
+            <div class="feature" style="flex:6">
                 <div class="column">
                     <div class="tile-group">
-                        <div class="tile">tile</div>
-                        <div class="tile hmid-4-l">tile</div>
-                        <div class="tile hmid-4-r">tile</div>
-                        <div class="tile">tile</div>
+                        <a class="card tile" href="https://duckduckgo.com">
+                            <img class="card-img-top" src="assets/medium.jpg">
+                            <div class="card-img-overlay bg-overlay">
+                                <h4 class="card-title">video</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="tile-group">
+                        <a class="card tile" href="https://duckduckgo.com">
+                            <img class="card-img-top" src="assets/medium2.jpg">
+                            <div class="card-img-overlay bg-overlay">
+                                <h4 class="card-title">video 2</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="tile-group">
+                        <a class="card tile" href="https://duckduckgo.com">
+                            <img class="card-img-top" src="assets/medium.jpg">
+                            <div class="card-img-overlay bg-overlay">
+                                <h4 class="card-title">video 3</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="tile-group">
+                        <a class="card tile" href="https://duckduckgo.com">
+                            <img class="card-img-top" src="assets/medium2.jpg">
+                            <div class="card-img-overlay bg-overlay">
+                                <h4 class="card-title">video 4</h4>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>

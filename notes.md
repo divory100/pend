@@ -24,7 +24,7 @@ LoadModule php_module modules/libphp.so
 AddType application/x-httpd-php .php
 PHPIniDir /etc/php/
 ```
-    to /etc/httpd/conf/httpd.conf
+    to /etc/httpd/conf/httpd.conf OR [debian] /etc/apache2/apache2.conf
 
 3. Edit these lines in httpd.conf to look like this:
 ```sh
@@ -43,12 +43,13 @@ in that case, make sure mpm_worker_module and mpm_event_module are uncommented
 
 ## 4. SQL/database setup
 1. install mariadb 
-2. run `sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql`
+2. run `sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql`
 3. run `sudo systemctl start mysqld`
 4. run `sudo mysql_secure_installation` (optional, for adding root password and whatever)
 5. [ONLY IF YOU MESS UP 1,2,3 and 4] run `mysql -u root`, then `FLUSH PRIVILEGES;` then `SET PASSWORD FOR 'root'@'localhost' = PASSWORD('<whatever>');`
 6. set to either start at boot (by `systemctl enable`-ing mysqld) or add it to a webserver start script
-7. run `sudo mysql -u root` then:
+7. run `CREATE USER mysql IDENTIFIED BY '<password>';` to make mysql user
+hmm. run `sudo mysql -u root` then:
     `ALTER USER 'user-name'@'localhost' IDENTIFIED BY '<password>';`
     `FLUSH PRIVILEGES;`
     to change mysql user password.

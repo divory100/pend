@@ -90,19 +90,15 @@ These sizings mean nothing if there is only one column*/
     height:200px;
 }
 
-#articles .card-img-top {
-    border-left: solid #0D6EFD 5px;
+#read .card-img-top {
+    border-left: solid #0D6efd 5px;
 }
 
-#podcasts .card-img-top {
-    border-left: solid #0dcaf0 5px;
+#listen .card-img-top {
+    border-left: solid #0DCAF0 5px;
 }
 
-#photos .card-img-top {
-    border-left: solid #ffc107 5px;
-}
-
-#videos .card-img-top {
+#watch .card-img-top {
     border-left: solid blueviolet 5px;
 }
 
@@ -116,10 +112,10 @@ These sizings mean nothing if there is only one column*/
     color:white;
 }
 
-/*increase card img border width when tile is hovered to eliminate gap*/
+/*increase card img border width when tile is hovered to eliminate gap
 .tile:hover > .card-img-top {
     border-left: solid #0D6EFD 6px;
-}
+}*/
 
 /*Margins for middle tiles in horizontal tile groups
 naming style: <orientation>mid-<num tiles>[-<side>] eg. vmid-2-l*/

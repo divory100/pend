@@ -3,7 +3,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>placeholder</title>
+        <script type="text/javascript">
+        if (screen.width <= 699) {
+            document.location = "m/index.html";
+        }
+        </script>
+        
+        <title>
+            <cms:editable name="page_title" type="text">
+                Pend Online
+            </cms:editable>
+        </title>
 
         
         <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -25,16 +35,15 @@
         <nav role="navigation" style="top:60px;" class="navbar navbar-expand-sm fixed-top justify-content-center custom-nav">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link active" href="index.php">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="articles.php">Articles</a></li>
-                <li class="nav-item"><a class="nav-link" href="podcasts.php">Podcasts</a></li>
-                <li class="nav-item"><a class="nav-link" href="photos.php">Photos</a></li>
-                <li class="nav-item"><a class="nav-link" href="videos.php">Videos</a></li>
+                <li class="nav-item"><a class="nav-link" href="read_homepage.php">Read</a></li>
+                <li class="nav-item"><a class="nav-link" href="listen_homepage.php">Listen</a></li>
+                <li class="nav-item"><a class="nav-link" href="watch_homepage.php">Watch</a></li>
             </ul>
         </nav>
       
         <div class="container-fluid invis-breaker"></div>
 
-        <div class="container-fluid" id="articles">
+        <div class="container-fluid" id="read">
             <div class="sidebar">
                 
             </div>
@@ -110,21 +119,7 @@
                                 <p class="card-text">13/9/22 &#8226; by <i>Some One</i></p>
                             </div>
                         </a>
-                    </div><!--
-                    <div class="tile-group tg-vert">
-                        <a class="card tile" href="https://duckduckgo.com">
-                            <span class="badge bg-danger">News & Factual</span>
-                            <div class="card-footer">Small news story</div>
-                        </a>
-                        <a class="card tile vmid-3" href="https://duckduckgo.com">
-                            <span class="badge bg-primary">Opinion</span>
-                            <div class="card-footer">Small opinion piece</div>
-                        </a>
-                        <a class="card tile" href="https://duckduckgo.com">
-                            <span class="badge bg-danger">News & Factual</span>
-                            <div class="card-footer">Small news story</div>
-                        </a>
-                    </div>-->
+                    </div>
                     <div class="tile-group">
                         <a class="card tile" href="https://duckduckgo.com">
                             <img class="card-img-top" src="assets/medium.jpg">
@@ -139,12 +134,12 @@
                 </div>
             </div>
 
-            <div class="sidebar s-title" style="color:#0D6EFD">
-                ARTICLES
+            <div class="sidebar s-title">
+                <a style="color:#0D6EFD !important;" href="read.php">READ &#10095;</a>
             </div>
         </div>
 
-        <div class="container-fluid" id="podcasts">
+        <div class="container-fluid" id="listen">
             <div class="sidebar">
                 
             </div>
@@ -200,112 +195,55 @@
                 </div>
             </div>
 
-            <div class="sidebar s-title" style="color:#0DCAF0;">
-                PODCASTS
+            <div class="sidebar s-title">
+                <a style="color:#0DCAF0 !important;" href="listen.php">LISTEN &#10095;</a>
             </div>
         </div>
 
-        <div class="container-fluid" id="photos">
+        <div class="container-fluid" id="watch">
             <div class="sidebar">
                 
             </div>
 
-            <div class="feature" style="flex:6">
+            <div class="feature" style="flex:6;">
                 <div class="column">
-                    <div class="tile-group">
-                        <a class="card tile" href="https://duckduckgo.com">
-                            <img class="card-img-top" src="assets/medium2.jpg">
-                            <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">album</h4>
-                            </div>
-                        </a>
+                        <div class="tile-group">
+                            <a class="card tile" href="https://duckduckgo.com">
+                                <img class="card-img-top" src="assets/medium2.jpg">
+                                <div class="card-img-overlay bg-overlay">
+                                    <h4 class="card-title">album</h4>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="column">
-                    <div class="tile-group">
-                        <a class="card tile" href="https://duckduckgo.com">
-                            <img class="card-img-top" src="assets/medium.jpg">
-                            <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">album 2</h4>
-                            </div>
-                        </a>
+                    <div class="column">
+                        <div class="tile-group">
+                            <a class="card tile" href="https://duckduckgo.com">
+                                <img class="card-img-top" src="assets/medium.jpg">
+                                <div class="card-img-overlay bg-overlay">
+                                    <h4 class="card-title">album 2</h4>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="column">
-                    <div class="tile-group">
-                        <a class="card tile" href="https://duckduckgo.com">
-                            <img class="card-img-top" src="assets/large.png">
-                            <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">another album</h4>
-                            </div>
-                        </a>
+                    <div class="column">
+                        <div class="tile-group">
+                            <a class="card tile" href="https://duckduckgo.com">
+                                <img class="card-img-top" src="assets/large.png">
+                                <div class="card-img-overlay bg-overlay">
+                                    <h4 class="card-title">another album</h4>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </div>
             </div>
 
-            <div class="sidebar s-title" style="color:#FFC107;">
-                PHOTOS
-            </div>
-        </div>
-
-        <div class="container-fluid" id="videos">
-            <div class="sidebar">
-                
-            </div>
-
-            <div class="feature" style="flex:6">
-                <div class="column">
-                    <div class="tile-group">
-                        <a class="card tile" href="https://duckduckgo.com">
-                            <img class="card-img-top" src="assets/medium.jpg">
-                            <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">video</h4>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="column">
-                    <div class="tile-group">
-                        <a class="card tile" href="https://duckduckgo.com">
-                            <img class="card-img-top" src="assets/medium2.jpg">
-                            <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">video 2</h4>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="column">
-                    <div class="tile-group">
-                        <a class="card tile" href="https://duckduckgo.com">
-                            <img class="card-img-top" src="assets/medium.jpg">
-                            <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">video 3</h4>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="column">
-                    <div class="tile-group">
-                        <a class="card tile" href="https://duckduckgo.com">
-                            <img class="card-img-top" src="assets/medium2.jpg">
-                            <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">video 4</h4>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="sidebar s-title" style="color:blueviolet;">
-                VIDEOS
+            <div class="sidebar s-title">
+                <a style="color:blueviolet !important;" href="watch.php">WATCH &#10095;</a>
             </div>
         </div>
-
 
     </body>
 </html>

@@ -14,3 +14,14 @@ body {
 .invis-breaker {
     height: 140px;
 }
+
+/*Add a dark tint over an image to ensure all text is readable*/
+.bg-overlay {
+    background-position: 0px 0px;
+    background: linear-gradient(to right,
+        #FFFFFF00 0px,     
+        #FFFFFF00 5px,  
+        #00000088 5px,   
+        #00000077 100% 
+    );  
+}

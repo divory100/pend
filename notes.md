@@ -88,6 +88,7 @@ put this file into /srv/http/ or wherever the website is
 11. chown /srv/http/ or wherever the site is to normal user, not root
 12. chmod 757 if necessary
 13. enable/disable KCfinder in config.php if necessary
+14. change snippets dir to embeds/
 
 ## 6. useful urls
 - https://www.linode.com/docs/guides/how-to-install-a-lamp-stack-on-arch-linux/ (arch-based) (ignore, im just using this for testing)

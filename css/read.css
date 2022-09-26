@@ -1,0 +1,43 @@
+/*.title-banner .card-img-top{
+    border: solid #0d6efd 4px;
+    border-bottom: none !important;
+}*/
+
+main .card {
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+}
+
+main {
+    border-right: solid #0d6efd 1px;
+    border-left: solid #0d6efd 1px;
+    padding: 0;
+}
+
+.text-body {
+    border-top: solid #0d6efd 1px;
+    border: solid black 10px;
+}
+
+.title-banner img {
+    width: 100%;
+    height: 300px;
+    border-radius: 0 !important;
+}
+
+.title-banner .card {
+    border-radius: 0 !important;
+}
+
+.title-banner h1, h4 {
+    text-align: center !important;
+}
+
+.title-banner {
+    color:white;
+    font-family: courier;
+    display:block;
+    text-decoration: none;
+    overflow: hidden;
+}

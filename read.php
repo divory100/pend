@@ -1,10 +1,12 @@
 <?php require_once( 'couch/cms.php' ); ?>
 <cms:template title='Read • Content' clonable="1">
+
+    <cms:editable name="article_author" type="text" />
     <cms:editable name="article_content" type="richtext" />
 
     <cms:editable name="article_image"
         width='100%'
-        height=' 300'
+        height=' 400'
         type='image'
     />
 </cms:template>
@@ -42,21 +44,23 @@
       
         <div class="container-fluid invis-breaker"></div>
 
-        <main class="container">
-            <div class="title-banner card" style="margin:0 !important;"> 
-                <img class="card-img-top" src="<cms:show article_image />">
-                <div class="card-img-overlay bg-overlay">
-                    <br>
-                    <h1>Title</h1>
-                    <h4><i>Some One<i></h4>
-                </div>
+        <main class="container" style="padding-top:5px;padding-bottom:5px;">
+            <div class="title">
+                <h1><a href="<cms:show k_page_link />"><cms:show k_page_title /></a></h1>
+                <h6><i><cms:show k_page_date /> • By <cms:show article_author /></i></h6>
             </div>
-            
-            <cms:show article_content />
+
+            <cms:if article_image>
+                <img id="cover-image" src="<cms:show article_image />" width=100% height=400px>
+            </cms:if>
+
+            <div class="text-body">
+                <cms:show article_content />
+            </div>
         </main>
     </body>
 </html>
 <cms:else />
-    <cms:embed 'read_homepage.php' />
+    <cms:embed 'read_homepage.html' />
 </cms:if>
 <?php COUCH::invoke(); ?>

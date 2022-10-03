@@ -1,12 +1,9 @@
 # Todo List
-- [ ] main page basic html/css: almost there, need to add fixed sidebar 
+- [ ] main page basic html/css
 - [x] sticky navbar: done
-- [ ] homepage slideshow: needs doing
 - [x] bootstrap? !IMPORTANT! - yes
-- [ ] login (php?); uploading: sort of done - will be done through couch so we needn't worry
-- [ ] security? - cross that bridge when we come to it
+- [x] login (php?); uploading: sort of done - will be done through couch so we needn't worry
 - [ ] hosting - nginx/apache -> aws/specific website hoster: nginx, need to finish sorting that but its mostly there. will add configs to repo
-- [ ] endless homepage feed: investigate later
 - [ ] global vars: not completely necessary; more of a code conventions thing for the end if we get finished early
 - [ ] articles page: not started
 - [ ] podcasts page: not started

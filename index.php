@@ -63,7 +63,7 @@
                     </div>
                     <div class="tile-group">
                         <a class="card tile" href="https://duckduckgo.com">
-                            <img class="card-img-top" src="assets/medium.jpg">
+                            <img class="card-img-top" src="assets/grey.png">
                             <div class="card-img-overlay bg-overlay">
                                 <h4 class="card-title">Test opinion piece</h4>
                                 <span class="badge bg-primary">Opinion</span>

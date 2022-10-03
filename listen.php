@@ -42,6 +42,6 @@
     </body>
 </html>
 <cms:else />
-    <cms:embed 'listen_homepage.php' />
+    <cms:embed 'listen_homepage.html' />
 </cms:if>
 <?php COUCH::invoke(); ?>

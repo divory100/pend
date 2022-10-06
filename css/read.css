@@ -25,7 +25,8 @@ main .container {
 
 .text-body {
     margin-top: 15px;
-    font-family: courier !important;
+    font-size: 25px;
+    font-family: sans-serif !important;
 }
 
 .title {

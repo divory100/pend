@@ -24,6 +24,10 @@ nav .navbar-nav li a{
   
     top: 60px;
 }
+
+.navbar .active {
+    border-bottom: solid red 1px;
+}
   
 /*Header*/
 .pagewide {

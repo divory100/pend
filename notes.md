@@ -76,10 +76,19 @@ define( 'K_DB_PASSWORD', 'mysql' );
 // 7.
 // MySQL hostname (it will usually be 'localhost')
 define( 'K_DB_HOST', 'localhost' );
+
+define( 'K_PRETTY_URLS', 1 );
 ```
 6. IMPORTANT: run `mysql -u mysql -p` and run `CREATE DATABASE content;`
 7. restart the webserver, go to <address>/couch and complete setup
 8. ^ use a valid email for the real webserver just in case u forget the password
+9. IMPORTANT: visit the admin panel, use option "generate .htaccess" underneath "administration" on the left sidebar.
+put this file into /srv/http/ or wherever the website is
+10. install gd-php
+11. chown /srv/http/ or wherever the site is to normal user, not root
+12. chmod 757 if necessary
+13. enable/disable KCfinder in config.php if necessary
+14. change snippets dir to embeds/
 
 ## 6. useful urls
 - https://www.linode.com/docs/guides/how-to-install-a-lamp-stack-on-arch-linux/ (arch-based) (ignore, im just using this for testing)

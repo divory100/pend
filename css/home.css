@@ -7,49 +7,27 @@ Last updated 27/7/2022
 
 */
 
+*{margin: 0;}
+
 
 /*Feature section borders*/
-#articles {
+#read {
     border-top: solid #0D6EFD 6px;
     border-left: solid #0D6EFD 1px;
     border-right: solid #0D6EFD 1px;
 }
 
-#podcasts {
+#listen {
     border-top: solid #0DCAF0 6px;
     border-left: solid #0DCAF0 1px;
     border-right: solid #0DCAF0 1px;
 }
 
-#photos {
-    border-top: solid #FFC107 6px;
-    border-left: solid #FFC107 1px;
-    border-right: solid #FFC107 1px;
-}
-
-#videos {
+#watch {
     border-top: solid blueviolet 6px;
     border-left: solid blueviolet 1px;
     border-right: solid blueviolet 1px;
 }
-
-.t1 {
-    border-left: solid #0D6EFD 5px;
-}
-
-.t2 {
-    border-left: solid #0DCAF0 5px;
-}
-
-.t3 {
-    border-left: solid #FFC107 5px;
-}
-
-.t4 {
-    border-left: solid blueviolet 5px;
-}
-
-
 
 .container-fluid {
     display: flex;
@@ -68,14 +46,45 @@ Last updated 27/7/2022
     text-align: center;
 }
 
+.s-title a {
+    text-decoration: none;
+}
+
+.s-title a:hover {
+    text-decoration: underline;
+    -ms-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -o-transform: scale(1.03);
+    transform: scale(1.03);
+}
+
+/*Feature banner (for narrow screens, replaces sidebar)*/
+.f-banner {
+    display: block;
+    clear: both;
+    width: 100%;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 1px;
+    padding: 5px;
+}
+
 /*hide sidebar when screen is under certain width*/
 @media (max-width: 1300px) {
     .sidebar {
         display:none;
     }
-  }
+}
 
-/*holder for columns. There is one for articles, podcasts, photos, and videos*/
+/*Show title banner above grid when screen is narrow*/
+@media (min-width: 1300px) {
+    .f-banner {
+        display: none;
+    }
+}
+
+/*holder for columns. There is one for read, listen, and watch*/
 .feature {
     display: flex;
 }

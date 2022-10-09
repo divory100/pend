@@ -1,6 +1,12 @@
 ## OPTION 1: LAMP STACK
 LAMP: Linux, Apache, MySQL, PHP
 
+## 0. ON DEBIAN (AWS)
+very simple
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mariadb-php-lamp-stack-on-debian-11
+
+no need for any of the other steps
+
 ## 1. Components
 - Apache (apache)
 - PHP (php, php-apache)

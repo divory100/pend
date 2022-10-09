@@ -3,6 +3,47 @@
     border-bottom: none !important;
 }*/
 
+/*Read Homepage list cards*/
+.article-card {
+    border-left: solid #0d6efd 5px;
+    display:block;
+    height:190px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding:5px;
+    background-color: rgb(241, 241, 241) !important;
+}
+
+.article-card p {
+    font-size: 15px !important;
+    font-family: sans-serif !important;
+}
+
+
+.article-card:hover, .btn-readmore:hover {
+    -ms-transform: scale(1.015);
+    -moz-transform: scale(1.015);
+    -webkit-transform: scale(1.015);
+    -o-transform: scale(1.015);
+    transform: scale(1.015);
+}
+
+.btn-readmore:hover {
+    color:white !important;
+}
+
+/*'read more' button*/
+.btn-readmore {
+    padding:7px;
+    border-radius: 5px;
+    background-color:#0d6efd;
+    color:white !important;
+    text-decoration: none;
+    font-family: courier;
+}
+
+
+/*Main Content Area*/
 main .card {
     margin: 0 !important;
     padding: 0 !important;
@@ -10,17 +51,9 @@ main .card {
 }
 
 main {
-    border: solid #0d6efd 1px !important;
-    background-color: rgb(241, 241, 241) !important;
-}
-
-main .container {
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-}
-
-#cover-image {
-    border-bottom: solid #0d6efd 5px;
+    border-left: solid black 1px;
+    border-right: solid black 1px;
+    /*border: solid #0d6efd 1px !important;*/
 }
 
 .text-body {
@@ -29,18 +62,30 @@ main .container {
     font-family: sans-serif !important;
 }
 
+main .container {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+#top-image {
+    border-bottom: solid #0d6efd 5px;
+    padding-bottom: 10px;
+}
+
+
+/*Title*/
 .title {
     border-bottom: solid #0d6efd 5px;
     margin-bottom:10px;
 }
 
 
-.title a {
+.title a, .article-card a {
     text-decoration: none !important;
     color: black;
 }
 
-.title a:hover {
+.title a:hover, .article-card a:hover {
     text-decoration: underline !important;
     color: black !important;
     text-decoration-color: #0d6efd !important;

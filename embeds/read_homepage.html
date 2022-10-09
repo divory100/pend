@@ -6,6 +6,8 @@
         
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/navbar.css">
+        <link rel="stylesheet" type="text/css" href="css/tile.css">
+        <link rel="stylesheet" type="text/css" href="css/read.css">
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -16,18 +18,46 @@
 
     <body>
         <div class="pagewide p-1 fixed-top">
-            <div class="container"><h1 style="font-family: courier">PEND</h1></div>
+            <div class="container"><img src="assets/logo.jpg" height=60px></div>
         </div>
       
         <nav role="navigation" style="top:60px;" class="navbar navbar-expand-sm fixed-top justify-content-center custom-nav">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-                <li class="nav-item"><a class="nav-link active" href="read.php">Read</a></li>
+                <li class="nav-item"><a class="nav-link r-active" href="read.php">Read</a></li>
                 <li class="nav-item"><a class="nav-link" href="listen.php">Listen</a></li>
                 <li class="nav-item"><a class="nav-link" href="watch.php">Watch</a></li>
             </ul>
         </nav>
       
         <div class="container-fluid invis-breaker"></div>
+
+        <main class="container" style="border:none">
+            <cms:pages masterpage="read.php">
+                <!--
+                <a class="card tile" href="<cms:show k_page_link />">
+                    <img class="card-img-top" style="object-fit:cover !important;" src="<cms:if cover_image><cms:show cover_image /><cms:else />assets/grey.png</cms:if>">
+                    <div class="card-img-overlay bg-overlay">
+                        <h4 class="card-title"><cms:show k_page_title /></h4>
+                        <span class="badge bg-secondary"><cms:show k_page_foldertitle /></span>
+                        <p class="card-text"><cms:date k_page_date format='jS M Y'/> &#8226; by <i><cms:show article_author /></i></p>
+                    </div>
+                </a>-->
+
+                <div class="article-card clearfix" style="background-color: gainsboro !important;">
+                    <div style="float:left;">
+                        <h1><a href="<cms:show k_page_link />"><cms:show k_page_title /></a></h1>
+                        <span class="badge bg-secondary"><cms:show k_page_foldertitle /></span>
+                        <h6><i><cms:date k_page_date format='jS M Y'/> • By <cms:show article_author /></i></h6>
+                        <p><cms:excerptHTML count='25' ignore='img'><cms:show article_content />...</cms:excerptHTML></p>
+                        <a href="<cms:show k_page_link />" class="btn-readmore">Read More &#10095;</a>
+                    </div>
+                    <cms:if cover_image>
+                        <img style="float:right;" src="<cms:show cover_image />" height=100%>
+                    </cms:if>
+                </div>
+
+            </cms:pages>
+        </main>
     </body>
 </html>

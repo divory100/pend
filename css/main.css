@@ -8,6 +8,7 @@ Last updated 27/7/2022
 
 body {
     font-family: sans-serif;
+    background-color: rgb(241, 241, 241) !important;
 }
 
 /*To add space to the page below the navbar, so no content is hidden*/
@@ -24,4 +25,15 @@ body {
         #00000088 5px,   
         #00000077 100% 
     );  
+}
+
+/*Clearfix*/
+.clearfix {
+    overflow: hidden;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }

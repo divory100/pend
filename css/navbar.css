@@ -25,8 +25,21 @@ nav .navbar-nav li a{
     top: 60px;
 }
 
-.navbar .active {
+/*Different border colours for different nav links*/
+.h-active {
     border-bottom: solid red 1px;
+}
+
+.r-active {
+    border-bottom: solid #0d6efd 1px;
+}
+
+.l-active {
+    border-bottom: solid #0dcaf0 1px;
+}
+
+.w-active {
+    border-bottom: solid blueviolet 1px;
 }
   
 /*Header*/

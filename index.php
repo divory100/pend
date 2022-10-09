@@ -29,12 +29,12 @@
     </head>
     <body>
         <div class="pagewide p-1 fixed-top">
-            <div class="container"><h1 style="font-family: courier">PEND</h1></div>
+            <div class="container"><img src="assets/logo.jpg" height=60px></div>
         </div>
       
         <nav role="navigation" style="top:60px;" class="navbar navbar-expand-sm fixed-top justify-content-center custom-nav">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link active" href="index.php">Home</a></li>
+                <li class="nav-item"><a class="nav-link h-active" href="index.php">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="read.php">Read</a></li>
                 <li class="nav-item"><a class="nav-link" href="listen.php">Listen</a></li>
                 <li class="nav-item"><a class="nav-link" href="watch.php">Watch</a></li>

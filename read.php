@@ -4,11 +4,18 @@
     <cms:editable name="article_author" type="text" />
     <cms:editable name="article_content" type="richtext" />
 
-    <cms:editable name="article_image"
+    <cms:editable name="top_image"
         width='100%'
         height=' 400'
         type='image'
     />
+
+    <cms:editable name="cover_image" type='image' />
+
+    <cms:folder name="opinion" title="Opinion" />
+    <cms:folder name="poetry" title="Poetry" />
+    <cms:folder name="fiction" title="Fiction" />
+
 </cms:template>
 
 <!--Check if the page is displaying a specific article, or the list of articles-->
@@ -30,13 +37,13 @@
     </head>
     <body>
         <div class="pagewide p-1 fixed-top">
-            <div class="container"><h1 style="font-family: courier">PEND</h1></div>
+            <div class="container"><img src="assets/logo.jpg" height=60px></div>
         </div>
       
         <nav role="navigation" style="top:60px;" class="navbar navbar-expand-sm fixed-top justify-content-center custom-nav">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-                <li class="nav-item"><a class="nav-link active" href="read.php">Read</a></li>
+                <li class="nav-item"><a class="nav-link r-active" href="read.php">Read</a></li>
                 <li class="nav-item"><a class="nav-link" href="listen.php">Listen</a></li>
                 <li class="nav-item"><a class="nav-link" href="watch.php">Watch</a></li>
             </ul>
@@ -47,11 +54,11 @@
         <main class="container" style="padding-top:5px;padding-bottom:5px;">
             <div class="title">
                 <h1><a href="<cms:show k_page_link />"><cms:show k_page_title /></a></h1>
-                <h6><i><cms:show k_page_date /> • By <cms:show article_author /></i></h6>
+                <h6><i><cms:date k_page_date format='jS M Y'/> • By <cms:show article_author /></i><br><span class="badge bg-secondary"><cms:show k_page_foldertitle /></span></h6>
             </div>
 
-            <cms:if article_image>
-                <img id="cover-image" src="<cms:show article_image />" width=100% height=400px>
+            <cms:if top_image>
+                <img id="top-image" src="<cms:show top_image />" width=100% height=400px>
             </cms:if>
 
             <div class="text-body">

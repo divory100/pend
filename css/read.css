@@ -4,14 +4,19 @@
 }*/
 
 /*Read Homepage list cards*/
-.article-card {
-    border-left: solid #0d6efd 5px;
-    display:block;
-    height:190px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding:5px;
-    background-color: rgb(241, 241, 241) !important;
+.tile {
+    background-color: #8a8989 !important;
+    border-radius: 4px !important;
+    margin: 2px;
+    width: 100% !important;
+}
+
+/*display only one per line when screen is too narrow*/
+@media (min-width: 1300px) {
+    .tile {
+        float:left;
+        width: 49% !important;
+    }
 }
 
 .article-card p {

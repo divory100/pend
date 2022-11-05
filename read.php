@@ -2,7 +2,7 @@
 <cms:template title='Read • Content' clonable="1">
 
     <cms:editable name="article_author" type="text" />
-    <cms:editable name="article_content" type="richtext" />
+    <cms:editable name="article_content" type="richtext" toolbar="full"/>
 
     <cms:editable name="top_image"
         width='100%'

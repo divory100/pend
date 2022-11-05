@@ -44,6 +44,19 @@
                     </div>
                 </a>-->
 
+                <a class="card tile" style="height:190px;width:49%;margin:2px !important;border-radius:4px !important;" href="<cms:show k_page_link />">
+                    <img class="card-img-top" src="<cms:show cover_image />" style="height:190px;border-left:solid #0d6efd 5px;">
+                    <div class="card-img-overlay bg-overlay">
+                        <h4 class="card-title"><cms:show k_page_title /></h4>
+                        <span class="badge bg-secondary"><cms:show k_page_foldertitle /></span>
+                        <p class="card-text">
+                            <cms:date k_page_date format='jS M Y'/> &#8226; by <i><cms:show article_author /></i><br>
+                            <cms:excerpt count="100" truncate_chars="1" trail="..."><cms:show article_content /></cms:excerpt>
+                        </p>
+                    </div>
+                </a>
+
+                <!--
                 <div class="article-card clearfix" style="background-color: gainsboro !important;">
                     <div style="float:left;">
                         <h1><a href="<cms:show k_page_link />"><cms:show k_page_title /></a></h1>
@@ -55,7 +68,7 @@
                     <cms:if cover_image>
                         <img style="float:right;" src="<cms:show cover_image />" height=100%>
                     </cms:if>
-                </div>
+                </div>-->
 
             </cms:pages>
         </main>

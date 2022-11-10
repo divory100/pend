@@ -1,7 +1,8 @@
 <?php require_once( 'couch/cms.php' ); ?>
-<cms:template title='Read • Content' clonable="1">
+<cms:template title='Read • Content' clonable="1" dynamic_folders="1">
 
     <cms:editable name="article_author" type="text" />
+    <cms:editable name="article_category" type="text" />
     <cms:editable name="article_content" type="richtext" toolbar="full"/>
 
     <cms:editable name="top_image"
@@ -12,6 +13,8 @@
 
     <cms:editable name="cover_image" type='image' />
 
+    <!--hard coded categories: low-level content type-->
+    <!--higher level categories can be managed from the admin panel-->
     <cms:folder name="opinion" title="Opinion" />
     <cms:folder name="poetry" title="Poetry" />
     <cms:folder name="fiction" title="Fiction" />
@@ -53,8 +56,16 @@
 
         <main class="container" style="padding-top:5px;padding-bottom:5px;">
             <div class="title">
+                
+                <!--get category-->
+                <cms:if k_page_foldertitle>
+                    <cms:set post_category=k_page_foldertitle />
+                <cms:else />
+                    <cms:set post_category="Uncategorised" />
+                </cms:if>
+
                 <h1><a href="<cms:show k_page_link />"><cms:show k_page_title /></a></h1>
-                <h6><i><cms:date k_page_date format='jS M Y'/> • By <cms:show article_author /></i><br><span class="badge bg-secondary"><cms:show k_page_foldertitle /></span></h6>
+                <h6><i><cms:date k_page_date format='jS M Y'/> • By <cms:show article_author /> &#8226; <cms:show k_comments_count /> comments</i><br><span class="badge bg-secondary"><cms:show post_category /></span></h6>
             </div>
 
             <cms:if top_image>

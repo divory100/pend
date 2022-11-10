@@ -4,7 +4,7 @@
 - [x] sticky navbar
 - [x] bootstrap?
 - [ ] hosting: 1&1/ionos possible
-- [ ] variables for css to make it tidier
+- [ ] variables for css to make it tidier (not necessary, add if there is time)
 - [ ] articles list view (50% done)
 - [ ] podcasts list view (andrew)
 - [ ] photo/video list view

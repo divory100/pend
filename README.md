@@ -1,12 +1,12 @@
 # Todo List
-- [ ] main page basic html/css
-- [x] sticky navbar: done
-- [x] bootstrap? !IMPORTANT! - yes
-- [x] login (php?); uploading: sort of done - will be done through couch so we needn't worry
-- [ ] hosting - nginx/apache -> aws/specific website hoster: nginx, need to finish sorting that but its mostly there. will add configs to repo
-- [ ] global vars: not completely necessary; more of a code conventions thing for the end if we get finished early
-- [ ] articles page: not started
-- [ ] podcasts page: not started
-- [ ] photos page: not started
-- [ ] videos page: not started
-- [ ] IMPORTANT: deal with pretty urls
+- [x] home page html/css
+- [ ] add couchcms to home page tiles
+- [x] sticky navbar
+- [x] bootstrap?
+- [ ] hosting: 1&1/ionos possible
+- [ ] variables for css to make it tidier
+- [ ] articles list view (50% done)
+- [ ] podcasts list view (andrew)
+- [ ] photo/video list view
+- [ ] upload some real content
+- [ ] couch pretty urls (leave until very end)

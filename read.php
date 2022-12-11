@@ -1,23 +1,17 @@
 <?php require_once( 'couch/cms.php' ); ?>
 <cms:template title='Read • Content' clonable="1" dynamic_folders="1">
 
-    <cms:editable name="article_author" type="text" />
-    <cms:editable name="article_category" type="text" />
-    <cms:editable name="article_content" type="richtext" toolbar="full"/>
+    <cms:editable label="Author*" name="article_author" type="text" />
+    <cms:editable label="Content Type*" desc="Type of content, for example Fiction or Opinion" name="article_content_type" type="text" />
+    <cms:editable label="Text Body*" desc="The content of the article; images can also be pasted in here" name="article_content" type="richtext" toolbar="full"/>
 
-    <cms:editable name="top_image"
+    <cms:editable label="Main Image" desc="optional: The large image that appears at the top of the article" name="top_image"
         width='100%'
         height=' 400'
         type='image'
     />
 
-    <cms:editable name="cover_image" type='image' />
-
-    <!--hard coded categories: low-level content type-->
-    <!--higher level categories can be managed from the admin panel-->
-    <cms:folder name="opinion" title="Opinion" />
-    <cms:folder name="poetry" title="Poetry" />
-    <cms:folder name="fiction" title="Fiction" />
+    <cms:editable label="Thumbnail Image" name="cover_image" desc="optional but preferred: The thumbnail image for the article, displayed on the homepage and list views" type='image' />
 
 </cms:template>
 

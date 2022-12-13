@@ -1,0 +1,19 @@
+/*
+Styles for pagination of articles in list view
+*/
+
+/*prev/next buttons*/
+.btn-pag {
+    padding:10px;
+    display:inline;
+}
+
+.btn-pag a {
+    text-decoration: none !important;
+}
+
+/*div for holding pagination setup*/
+.paginator {
+    justify-content:center;
+    margin:auto;
+}

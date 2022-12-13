@@ -59,7 +59,7 @@
                 </cms:if>
 
                 <h1><a href="<cms:show k_page_link />"><cms:show k_page_title /></a></h1>
-                <h6><i><cms:date k_page_date format='jS M Y'/> • By <cms:show article_author /> &#8226; <cms:show k_comments_count /> comments</i><br><span class="badge bg-secondary"><cms:show post_category /></span></h6>
+                <h6><cms:date k_page_date format='jS M Y'/> • By <cms:show article_author /> &#8226; <cms:show k_comments_count /> comments<br><span class="badge bg-secondary"><cms:show post_category /></span></h6>
             </div>
 
             <cms:if top_image>

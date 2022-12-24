@@ -33,7 +33,7 @@
       
         <div class="container-fluid invis-breaker"></div>
 
-        <main class="container" style="border:none">
+        <main class="container" style="border:none;">
             <cms:pages masterpage="read.php" paginate="1" limit="10">
 
                 <!--get category-->
@@ -57,12 +57,14 @@
 
                 <!--buttons for left/right pagination-->
                 <cms:if k_paginated_bottom >
-                    <div class="paginator clearfix" style="display:block !important;clear:both !important;">
+                    <div class="paginator clearfix">
+                        <div class="breaker" style="padding:10px">
                         <cms:if k_paginate_link_next >
-                            <a href="<cms:show k_paginate_link_next />" class="btn-pag button btn-secondary">Next ></a>
+                            <div class="pag-buffer"></div>
+                            <a href="<cms:show k_paginate_link_next />" class="button btn-secondary btn-pag">Next ></a>
                         </cms:if>
                         <cms:if k_paginate_link_prev >
-                            <a href="<cms:show k_paginate_link_prev />" class="btn-pag button btn-secondary">&lt; Previous</a>
+                            <a href="<cms:show k_paginate_link_prev />" style="float: left;" class="btn-pag button btn-secondary">&lt; Previous</a>
                         </cms:if>
                     </div>
                 </cms:if>

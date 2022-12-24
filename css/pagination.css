@@ -4,16 +4,33 @@ Styles for pagination of articles in list view
 
 /*prev/next buttons*/
 .btn-pag {
-    padding:10px;
+    width:140px;
+    height:40px;
     display:inline;
+    float: right;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
 }
 
-.btn-pag a {
-    text-decoration: none !important;
+/*background color for the button must be set this way*/
+.paginator a {
+    background-color: #0d6efd !important;
+
 }
 
 /*div for holding pagination setup*/
 .paginator {
     justify-content:center;
     margin:auto;
+    display:block !important;
+    clear:both !important;
+}
+
+/*div to stop it from being too close to the edge on the right hand side*/
+.pag-buffer {
+    padding:9px;
+    float:right;
 }

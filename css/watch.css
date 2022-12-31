@@ -1,0 +1,110 @@
+/*.title-banner .card-img-top{
+    border: solid #0d6efd 4px;
+    border-bottom: none !important;
+}*/
+
+/*Read Homepage list cards*/
+.tile {
+    background-color: #8a8989 !important;
+    border-radius: 4px !important;
+    margin: 2px;
+    width: 100% !important;
+}
+
+/*display only one per line when screen is too narrow*/
+@media (min-width: 1300px) {
+    .tile {
+        float:left;
+        width: 49% !important;
+    }
+}
+
+.article-card p {
+    font-size: 15px !important;
+    font-family: sans-serif !important;
+}
+
+
+.article-card:hover, .btn-readmore:hover {
+    -ms-transform: scale(1.015);
+    -moz-transform: scale(1.015);
+    -webkit-transform: scale(1.015);
+    -o-transform: scale(1.015);
+    transform: scale(1.015);
+}
+
+.btn-readmore:hover {
+    color:white !important;
+}
+
+/*'read more' button*/
+.btn-readmore {
+    padding:7px;
+    border-radius: 5px;
+    background-color: blueviolet;
+    color:white !important;
+    text-decoration: none;
+    font-family: courier;
+}
+
+
+/*Main Content Area*/
+main .card {
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+}
+
+main {
+    border-left: solid black 1px;
+    border-right: solid black 1px;
+    /*border: solid #0d6efd 1px !important;*/
+}
+
+.text-body {
+    margin-top: 15px;
+    font-size: 25px;
+    font-family: sans-serif !important;
+}
+
+main .container {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+#top-image {
+    border-bottom: solid blueviolet 5px;
+    padding-bottom: 10px;
+}
+
+
+/*Title*/
+.title {
+    border-bottom: solid blueviolet 5px;
+    margin-bottom:10px;
+}
+
+
+.title a, .article-card a {
+    text-decoration: none !important;
+    color: black;
+}
+
+.title a:hover, .article-card a:hover {
+    text-decoration: underline !important;
+    color: black !important;
+    text-decoration-color: blueviolet !important;
+}
+
+.title-banner {
+    color:white;
+    font-family: courier;
+    display:block;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.paginator a {
+    background-color: blueviolet !important;
+
+}

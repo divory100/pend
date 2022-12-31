@@ -34,7 +34,7 @@
         <div class="container-fluid invis-breaker"></div>
 
         <main class="container" style="border: none;">
-            <cms:pages masterpage="../listen.php" paginate="1" limit="10">
+            <cms:pages masterpage="../listen.php" paginate="1" limit="20">
 
             <!--get category-->
             <cms:if k_page_foldertitle>
@@ -43,7 +43,7 @@
                 <cms:set post_category="Uncategorised" />
             </cms:if>
 
-            <a class="card tile" style="height:190px;width:49%;margin:2px !important;border-radius:4px !important;" href="<cms:show k_page_link />">
+            <a class="card tile" style="height:80px;width:49%;margin:2px !important;border-radius:4px !important;" href="<cms:show k_page_link />">
                 <img class="card-img-top" src="<cms:show cover_image />" style="height:190px;border-left:solid #0DCAF0 5px;">
                 <div class="card-img-overlay bg-overlay">
                     <h4 class="card-title"><cms:show k_page_title /></h4>

@@ -16,10 +16,12 @@ Styles for pagination of articles in list view
 }
 
 /*background color for the button must be set this way*/
-.paginator a {
+
+/* I've moved this into the respective css files for each type of content so that the colour can change based on that.  */
+/*.paginator a {
     background-color: #0d6efd !important;
 
-}
+}*/
 
 /*div for holding pagination setup*/
 .paginator {

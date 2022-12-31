@@ -34,10 +34,10 @@
       
         <nav role="navigation" style="top:60px;" class="navbar navbar-expand-sm fixed-top justify-content-center custom-nav">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link h-active" href="index.php">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="read.php">Read</a></li>
-                <li class="nav-item"><a class="nav-link" href="listen.php">Listen</a></li>
-                <li class="nav-item"><a class="nav-link" href="watch.php">Watch</a></li>
+                <li class="nav-item"><a class="nav-link l-active" href="index.php">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="embeds/read_homepage.html">Read</a></li>
+                <li class="nav-item"><a class="nav-link" href="embeds/listen_homepage.html">Listen</a></li>
+                <li class="nav-item"><a class="nav-link" href="embeds/watch_homepage.html">Watch</a></li>
             </ul>
         </nav>
       
@@ -135,7 +135,7 @@
             </div>
 
             <div class="sidebar s-title">
-                <a style="color:#0D6EFD !important;" href="read.php">READ &#10095;</a>
+                <a style="color:#0D6EFD !important;" href="embeds/read_homepage.html">READ &#10095;</a>
             </div>
         </div>
 
@@ -196,7 +196,7 @@
             </div>
 
             <div class="sidebar s-title">
-                <a style="color:#0DCAF0 !important;" href="listen.php">LISTEN &#10095;</a>
+                <a style="color:#0DCAF0 !important;" href="embeds/listen_homepage.html">LISTEN &#10095;</a>
             </div>
         </div>
 
@@ -241,7 +241,7 @@
             </div>
 
             <div class="sidebar s-title">
-                <a style="color:blueviolet !important;" href="watch.php">WATCH &#10095;</a>
+                <a style="color:blueviolet !important;" href="embeds/watch_homepage.html">WATCH &#10095;</a>
             </div>
         </div>
 

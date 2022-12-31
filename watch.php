@@ -28,9 +28,9 @@
         <nav role="navigation" style="top:60px;" class="navbar navbar-expand-sm fixed-top justify-content-center custom-nav">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="read.php">Read</a></li>
-                <li class="nav-item"><a class="nav-link" href="listen.php">Listen</a></li>
-                <li class="nav-item"><a class="nav-link w-active" href="watch.php">Watch</a></li>
+                <li class="nav-item"><a class="nav-link" href="embeds/read_homepage.html">Read</a></li>
+                <li class="nav-item"><a class="nav-link" href="embeds/listen_homepage.html">Listen</a></li>
+                <li class="nav-item"><a class="nav-link l-active" href="embeds/watch_homepage.html">Watch</a></li>
             </ul>
         </nav>
       

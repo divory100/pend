@@ -1,0 +1,43 @@
+/*List view cards*/
+.tile {
+    background-color: #8a8989 !important;
+    border-radius: 4px !important;
+    margin: 2px;
+    width: 100% !important;
+}
+
+/*display only one per line when screen is too narrow*/
+@media (min-width: 1300px) {
+    .tile {
+        float:left;
+        width: 49% !important;
+    }
+}
+
+/*Filtering Content*/
+.filter-options {
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.filter-options select {
+    display:inline;
+    width:40%;
+    height:45px;
+    text-align:center;
+    border:solid #0d6efd 3px;
+    border-radius:5px;
+    font-family:courier;
+    font-size:20px;
+}
+
+.filter-options input {
+    width:17%;
+    height:45px;
+    background-color:#0d6efd;
+    color:white;
+    border: none;
+    border-radius:5px;
+    font-family:courier;
+    font-size:20px;
+}

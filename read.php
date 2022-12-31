@@ -1,9 +1,9 @@
 <?php require_once( 'couch/cms.php' ); ?>
 <cms:template title='Read • Content' clonable="1" dynamic_folders="1">
 
-    <cms:editable label="Author*" name="article_author" type="text" />
-    <cms:editable label="Content Type*" desc="Type of content, for example Fiction or Opinion" name="article_content_type" type="text" />
-    <cms:editable label="Text Body*" desc="The content of the article; images can also be pasted in here" name="article_content" type="richtext" toolbar="full"/>
+    <cms:editable label="Author*" name="read_author" type="text" />
+    <cms:editable label="Content Type*" desc="Type of content, for example Fiction or Opinion" name="read_content_type" type="text" />
+    <cms:editable label="Text Body*" desc="The content of the article; images can also be pasted in here" name="read_content" type="richtext" toolbar="full"/>
 
     <cms:editable label="Main Image" desc="optional: The large image that appears at the top of the article" name="top_image"
         width='100%'
@@ -15,12 +15,12 @@
 
 </cms:template>
 
-<!--Check if the page is displaying a specific article, or the list of articles-->
+<!--Check if the page is displaying a specific page, or the list of pages-->
 <cms:if k_is_page>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Article • Pend</title>
+        <title>Read • Pend</title>
             
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/navbar.css">
@@ -48,7 +48,7 @@
       
         <div class="container-fluid invis-breaker"></div>
 
-        <main class="container" style="padding-top:5px;padding-bottom:5px;">
+        <main class="container" style="padding-top:5px;padding-bottom:5px;" id="read-main">
             <div class="title">
                 
                 <!--get category-->
@@ -59,7 +59,11 @@
                 </cms:if>
 
                 <h1><a href="<cms:show k_page_link />"><cms:show k_page_title /></a></h1>
-                <h6><cms:date k_page_date format='jS M Y'/> • By <cms:show article_author /> &#8226; <cms:show k_comments_count /> comments<br><span class="badge bg-secondary"><cms:show post_category /></span></h6>
+                <h6>
+                    <cms:date k_page_date format='jS M Y'/> • By <cms:show read_author /> &#8226; <cms:show k_comments_count /> comments<br>
+                    <span class="badge bg-primary"><cms:show read_content_type /></span>
+                    <span class="badge bg-secondary"><cms:show post_category /></span>
+                </h6>
             </div>
 
             <cms:if top_image>
@@ -67,7 +71,7 @@
             </cms:if>
 
             <div class="text-body">
-                <cms:show article_content />
+                <cms:show read_content />
             </div>
         </main>
     </body>

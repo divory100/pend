@@ -1,14 +1,26 @@
 <?php require_once( 'couch/cms.php' ); ?>
-<cms:template title='Watch • Content' clonable="1">
+<cms:template title='Read • Content' clonable="1" dynamic_folders="1">
+
+    <cms:editable label="Author*" name="watch_author" type="text" />
+    <cms:editable label="Content Type*" desc="Type of content, for example Film or Documentary" name="watch_content_type" type="text" />
+    <cms:editable label="File*" desc="The video or photo/photo album" name="watch_content" type="file">
+
+    <cms:editable label="Main Image" desc="optional: The large image that appears at the top of the page" name="top_image"
+        width='100%'
+        height=' 400'
+        type='image'
+    />
+
+    <cms:editable label="Thumbnail Image" name="cover_image" desc="optional but preferred: The thumbnail image for the page, displayed on the homepage and list views" type='image' />
 
 </cms:template>
 
-<!--Check if the page is displaying a specific video or album, or the list of photos/videos-->
+<!--Check if the page is displaying a specific page, or the list of pages-->
 <cms:if k_is_page>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Media • Pend</title>
+        <title>Watch • Pend</title>
             
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/navbar.css">
@@ -28,16 +40,39 @@
         <nav role="navigation" style="top:60px;" class="navbar navbar-expand-sm fixed-top justify-content-center custom-nav">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="read.php">Read</a></li>
+                <li class="nav-item"><a class="nav-link r-active" href="read.php">Read</a></li>
                 <li class="nav-item"><a class="nav-link" href="listen.php">Listen</a></li>
-                <li class="nav-item"><a class="nav-link w-active" href="watch.php">Watch</a></li>
+                <li class="nav-item"><a class="nav-link" href="watch.php">Watch</a></li>
             </ul>
         </nav>
       
         <div class="container-fluid invis-breaker"></div>
 
-        <main class="container">
-            
+        <main class="container" style="padding-top:5px;padding-bottom:5px;" id="read-main">
+            <div class="title" style="border-color:blueviolet !important;">
+                
+                <!--get category-->
+                <cms:if k_page_foldertitle>
+                    <cms:set post_category=k_page_foldertitle />
+                <cms:else />
+                    <cms:set post_category="Uncategorised" />
+                </cms:if>
+
+                <h1><a href="<cms:show k_page_link />"><cms:show k_page_title /></a></h1>
+                <h6>
+                    <cms:date k_page_date format='jS M Y'/> • By <cms:show watch_author /> &#8226; <cms:show k_comments_count /> comments<br>
+                    <span class="badge bg-primary"><cms:show watch_content_type /></span>
+                    <span class="badge bg-secondary"><cms:show post_category /></span>
+                </h6>
+            </div>
+
+            <cms:if top_image>
+                <img id="top-image" src="<cms:show top_image />" width=100% height=400px>
+            </cms:if>
+
+            <div class="text-body">
+                <cms:show watch_content />
+            </div>
         </main>
     </body>
 </html>

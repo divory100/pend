@@ -1,14 +1,26 @@
 <?php require_once( 'couch/cms.php' ); ?>
-<cms:template title='Listen • Content' clonable="1">
+<cms:template title='Listen • Content' clonable="1" dynamic_folders="1">
+
+    <cms:editable label="Author*" name="listen_author" type="text" />
+    <cms:editable label="Content Type*" desc="Type of content, for example Podcast or Poetry" name="listen_content_type" type="text" />
+    <cms:editable label="Audio File*" desc="The audio content" name="listen_content" type="file"/>
+
+    <cms:editable label="Main Image" desc="optional: The large image that appears at the top of the page" name="top_image"
+        width='100%'
+        height=' 400'
+        type='image'
+    />
+
+    <cms:editable label="Thumbnail Image" name="cover_image" desc="optional but preferred: The thumbnail image for the page, displayed on the homepage and list views" type='image' />
 
 </cms:template>
 
-<!--Check if the page is displaying a specific podcast, or the list of podcasts-->
+<!--Check if the page is displaying a specific page, or the list of pages-->
 <cms:if k_is_page>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Podcast • Pend</title>
+        <title>Listen • Pend</title>
             
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/navbar.css">
@@ -36,8 +48,31 @@
       
         <div class="container-fluid invis-breaker"></div>
 
-        <main class="container">
-            
+        <main class="container" style="padding-top:5px;padding-bottom:5px;" id="read-main">
+            <div class="title" style="border-color: #0dcaf0 !important;">
+                
+                <!--get category-->
+                <cms:if k_page_foldertitle>
+                    <cms:set post_category=k_page_foldertitle />
+                <cms:else />
+                    <cms:set post_category="Uncategorised" />
+                </cms:if>
+
+                <h1><a href="<cms:show k_page_link />"><cms:show k_page_title /></a></h1>
+                <h6>
+                    <cms:date k_page_date format='jS M Y'/> • By <cms:show listen_author /> &#8226; <cms:show k_comments_count /> comments<br>
+                    <span class="badge bg-primary"><cms:show listen_content_type /></span>
+                    <span class="badge bg-secondary"><cms:show post_category /></span>
+                </h6>
+            </div>
+
+            <cms:if top_image>
+                <img id="top-image" src="<cms:show top_image />" width=100% height=400px>
+            </cms:if>
+
+            <div class="text-body">
+                <cms:show listen_content />
+            </div>
         </main>
     </body>
 </html>

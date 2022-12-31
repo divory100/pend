@@ -59,6 +59,7 @@ Last updated 27/7/2022
     transform: scale(1.03);
 }
 
+/*HOMEPAGE-ONLY CARD TILE LAYOUT*/
 /*Feature banner (for narrow screens, replaces sidebar)*/
 .f-banner {
     display: block;

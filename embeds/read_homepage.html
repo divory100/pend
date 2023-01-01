@@ -43,7 +43,7 @@
                     <select name="folder" id="select-folder">
                         <option value="" disabled selected>Category</option>
                         <cms:folders masterpage="read.php">
-                            <option value=k_folder_name><cms:show k_folder_title/></option>
+                            <option value="<cms:show k_folder_name />"><cms:show k_folder_title/></option>
                         </cms:folders>
                     </select>
 

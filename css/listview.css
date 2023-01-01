@@ -22,7 +22,7 @@
 
 .filter-options select {
     display:inline;
-    width:40%;
+    width:37%;
     height:45px;
     text-align:center;
     border:solid #0d6efd 3px;
@@ -32,12 +32,22 @@
 }
 
 .filter-options input {
-    width:17%;
     height:45px;
-    background-color:#0d6efd;
     color:white;
     border: none;
     border-radius:5px;
-    font-family:courier;
     font-size:20px;
+    font-family:courier;
 }
+
+.filter-options #btn-filter {
+    width:18%;
+    background-color:#0d6efd;
+
+}
+
+.filter-options #btn-reset {
+    width:5%;
+    background-color:#ac2c27;
+}
+

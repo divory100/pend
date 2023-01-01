@@ -42,20 +42,23 @@
                 <form onsubmit="return false">
                     <select name="folder" id="select-folder">
                         <option value="" disabled selected>Category</option>
+                        <option value=""><i>Any</i></option>
                         <cms:folders masterpage="read.php">
-                            <option value="<cms:show k_folder_name />"><cms:show k_folder_title/></option>
+                            <option value="<cms:show k_folder_id />"><cms:show k_folder_title/></option>
                         </cms:folders>
                     </select>
 
                     <select name="contenttype" id="select-contenttype">
-                        <option value="" disabled selected>Content Type</option>
+                        <option value="any" disabled selected>Content Type</option>
+                        <option value="any"><i>Any</i></option>
                         <option value="Opinion">Opinion</option>
                         <option value="Fiction">Fiction</option>
                         <option value="Non-Fiction">Non-Fiction</option>
                         <option value="Poetry">Poetry</option>
                     </select>
 
-                    <input type="submit" value="Filter" onclick="applyListFilter()">
+                    <input id="btn-filter" type="submit" value="Filter" onclick="applyListFilter()">
+                    <input id="btn-reset" type="submit" value="&#9747;" onclick="resetListFilter()">
 
                 </form>
             </div>
@@ -72,11 +75,11 @@
                     <img class="card-img-top" src="<cms:show cover_image />" style="height:190px;border-left:solid #0d6efd 5px;">
                     <div class="card-img-overlay bg-overlay">
                         <h4 class="card-title"><cms:show k_page_title /></h4>
-                        <span class="badge bg-primary"><cms:show article_content_type /></span>
+                        <span class="badge bg-primary"><cms:show read_content_type /></span>
                         <span class="badge bg-secondary"><cms:show post_category /></span>
                         <p class="card-text">
-                            <cms:date k_page_date format='jS M Y'/> &#8226; by <i><cms:show article_author /></i><br>
-                            <cms:excerpt count="100" truncate_chars="1" trail="..."><cms:show article_content /></cms:excerpt>
+                            <cms:date k_page_date format='jS M Y'/> &#8226; by <i><cms:show read_author /></i><br>
+                            <cms:excerpt count="100" truncate_chars="1" trail="..."><cms:show read_content /></cms:excerpt>
                         </p>
                     </div>
                 </a>

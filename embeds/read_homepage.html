@@ -42,14 +42,14 @@
                 <form onsubmit="return false">
                     <select name="folder" id="select-folder">
                         <option value="" disabled selected>Category</option>
-                        <option value=""><i>Any</i></option>
+                        <option value="any"><i>Any</i></option>
                         <cms:folders masterpage="read.php">
                             <option value="<cms:show k_folder_id />"><cms:show k_folder_title/></option>
                         </cms:folders>
                     </select>
 
                     <select name="contenttype" id="select-contenttype">
-                        <option value="any" disabled selected>Content Type</option>
+                        <option value="" disabled selected>Content Type</option>
                         <option value="any"><i>Any</i></option>
                         <option value="Opinion">Opinion</option>
                         <option value="Fiction">Fiction</option>
@@ -63,7 +63,7 @@
                 </form>
             </div>
 
-            <cms:pages masterpage="read.php" folder=k_folder_name custom_field="" paginate="1" limit="10">
+            <cms:pages masterpage="read.php" folder=k_folder_name custom_field="read_content_type=<cms:gpc 'ct' />" paginate="1" limit="10">
                 <!--get category-->
                 <cms:if k_page_foldertitle>
                     <cms:set post_category=k_page_foldertitle />

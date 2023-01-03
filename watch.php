@@ -3,7 +3,7 @@
 
     <cms:editable label="Author*" name="watch_author" type="text" />
     <cms:editable label="Content Type*" desc="Type of content, for example Film or Documentary" name="watch_content_type" type="text" />
-    <cms:editable label="File*" desc="The video or photo/photo album" name="watch_content" type="file">
+    <cms:editable label="File*" desc="The video or photo/photo album" name="watch_content" type="file" />
 
     <cms:editable label="Main Image" desc="optional: The large image that appears at the top of the page" name="top_image"
         width='100%'

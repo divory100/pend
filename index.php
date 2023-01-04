@@ -51,85 +51,127 @@
             <div class="feature" style="flex:6">
                 <div class="column c-large">
                     <div class="tile-group">
-                        <a class="card tile" href="https://duckduckgo.com">
-                            <img class="card-img-top" src="assets/large.png">
-                            <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">Test long news article</h4>
-                                <span class="badge bg-danger">News & Factual</span>
-                                <span class="badge bg-secondary">Science</span>
-                                <p class="card-text">13/9/22 &#8226; by <i>Some One</i></p>
-                            </div>
-                        </a>
+                        <cms:pages masterpage='read.php' orderby='publish_date' order='desc' limit='1'>
+                            <a class="card tile" href="<cms:show k_page_link />">
+                                <img class="card-img-top" src="<cms:show cover_image />">
+                                <div class="card-img-overlay bg-overlay">
+                                    <h4 class="card-title"><cms:show k_page_title /></h4>
+                                    <span class="badge bg-primary"><cms:show read_content_type /></span>
+                                    <span class="badge bg-secondary"><cms:show k_page_foldertitle /></span>
+                                    <p class="card-text">
+                                        <cms:date k_page_date format='jS M Y'/> &#8226; by <i><cms:show read_author /></i><br>
+                                        <cms:excerpt count="100" truncate_chars="1" trail="..."><cms:show read_content /></cms:excerpt>
+                                    </p>
+                                </div>
+                            </a>
+                        </cms:pages>
                     </div>
                     <div class="tile-group">
-                        <a class="card tile" href="https://duckduckgo.com">
-                            <img class="card-img-top" src="assets/grey.png">
-                            <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">Test opinion piece</h4>
-                                <span class="badge bg-primary">Opinion</span>
-                                <span class="badge bg-secondary">Controversial</span>
-                                <p class="card-text">13/9/22 &#8226; by <i>Some One</i></p>
-                            </div>
-                        </a>
-                        <a class="card tile hmid-3" href="https://duckduckgo.com">
-                            <img class="card-img-top" src="assets/medium2.jpg">
-                            <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">Test creative writing</h4>
-                                <span class="badge bg-success">Creative</span>
-                                <p class="card-text">13/9/22 &#8226; by <i>Some One</i></p>
-                            </div>
-                        </a>
-                        <a class="card tile" href="https://duckduckgo.com">
-                            <img class="card-img-top" src="assets/medium.jpg">
-                            <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">Test opinion piece</h4>
-                                <span class="badge bg-primary">Opinion</span>
-                                <p class="card-text">13/9/22 &#8226; by <i>Some One</i></p>
-                            </div>
-                        </a>
+
+                        <cms:pages masterpage='read.php' orderby='publish_date' order='desc' limit='1' offset='2'>
+                            <a class="card tile" href="<cms:show k_page_link />">
+                                <img class="card-img-top" src="<cms:show cover_image />">
+                                <div class="card-img-overlay bg-overlay">
+                                    <h4 class="card-title"><cms:show k_page_title /></h4>
+                                    <span class="badge bg-primary"><cms:show read_content_type /></span>
+                                    <span class="badge bg-secondary"><cms:show k_page_foldertitle /></span>
+                                    <p class="card-text">
+                                        <cms:date k_page_date format='jS M Y'/> &#8226; by <i><cms:show read_author /></i><br>
+                                    </p>
+                                </div>
+                            </a>
+                        </cms:pages>
+
+                        <cms:pages masterpage='read.php' orderby='publish_date' order='desc' limit='1' offset='3'>
+                            <a class="card tile hmid-3" href="<cms:show k_page_link />">
+                                <img class="card-img-top" src="<cms:show cover_image />">
+                                <div class="card-img-overlay bg-overlay">
+                                    <h4 class="card-title"><cms:show k_page_title /></h4>
+                                    <span class="badge bg-primary"><cms:show read_content_type /></span>
+                                    <span class="badge bg-secondary"><cms:show k_page_foldertitle /></span>
+                                    <p class="card-text">
+                                        <cms:date k_page_date format='jS M Y'/> &#8226; by <i><cms:show read_author /></i><br>
+                                    </p>
+                                </div>
+                            </a>
+                        </cms:pages>
+
+                        <cms:pages masterpage='read.php' orderby='publish_date' order='desc' limit='1' offset='4'>
+                            <a class="card tile" href="<cms:show k_page_link />">
+                                <img class="card-img-top" src="<cms:show cover_image />">
+                                <div class="card-img-overlay bg-overlay">
+                                    <h4 class="card-title"><cms:show k_page_title /></h4>
+                                    <span class="badge bg-primary"><cms:show read_content_type /></span>
+                                    <span class="badge bg-secondary"><cms:show k_page_foldertitle /></span>
+                                    <p class="card-text">
+                                        <cms:date k_page_date format='jS M Y'/> &#8226; by <i><cms:show read_author /></i><br>
+                                    </p>
+                                </div>
+                            </a>
+                        </cms:pages>
                     </div>
                     <div class="tile-group">
-                        <a class="card tile hmid-2-l" href="https://duckduckgo.com">
-                            <img class="card-img-top" src="assets/large.png">
-                            <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">Test creative writing piece</h4>
-                                <span class="badge bg-success">Creative</span>
-                                <span class="badge bg-secondary">test category</span>
-                                <p class="card-text">13/9/22 &#8226; by <i>Some One</i></p>
-                            </div>
-                        </a>
-                        <a class="card tile" href="https://duckduckgo.com">
-                            <img class="card-img-top" src="assets/medium3.jpg">
-                            <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">a long story</h4>
-                                <span class="badge bg-success">Creative</span>
-                                <p class="card-text">13/9/22 &#8226; by <i>Some One</i></p>
-                            </div>
-                        </a>
+                        <cms:pages masterpage='read.php' orderby='publish_date' order='desc' limit='1' offset='5'>
+                            <a class="card tile hmid-2-l" href="<cms:show k_page_link />">
+                                <img class="card-img-top" src="<cms:show cover_image />">
+                                <div class="card-img-overlay bg-overlay">
+                                    <h4 class="card-title"><cms:show k_page_title /></h4>
+                                    <span class="badge bg-primary"><cms:show read_content_type /></span>
+                                    <span class="badge bg-secondary"><cms:show k_page_foldertitle /></span>
+                                    <p class="card-text">
+                                        <cms:date k_page_date format='jS M Y'/> &#8226; by <i><cms:show read_author /></i><br>
+                                    </p>
+                                </div>
+                            </a>
+                        </cms:pages>
+
+                        <cms:pages masterpage='read.php' orderby='publish_date' order='desc' limit='1' offset='6'>
+                            <a class="card tile" href="<cms:show k_page_link />">
+                                <img class="card-img-top" src="<cms:show cover_image />">
+                                <div class="card-img-overlay bg-overlay">
+                                    <h4 class="card-title"><cms:show k_page_title /></h4>
+                                    <span class="badge bg-primary"><cms:show read_content_type /></span>
+                                    <span class="badge bg-secondary"><cms:show k_page_foldertitle /></span>
+                                    <p class="card-text">
+                                        <cms:date k_page_date format='jS M Y'/> &#8226; by <i><cms:show read_author /></i><br>
+                                    </p>
+                                </div>
+                            </a>
+                        </cms:pages>
                     </div>
                 </div>
     
                 <div class="column c-small">
                     <div class="tile-group">
-                        <a class="card tile" style="height:408px;" href="https://duckduckgo.com">
-                            <img class="card-img-top" src="assets/medium.jpg" style="height:408px;">
-                            <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">What happens if Pinocchio says 'My nose will grow'?</h4>
-                                <span class="badge bg-primary">Opinion</span>
-                                <p class="card-text">13/9/22 &#8226; by <i>Some One</i></p>
-                            </div>
-                        </a>
+                        <cms:pages masterpage='read.php' orderby='publish_date' order='desc' limit='1' offset='1'>
+                            <a class="card tile" style="height:408px;" href="<cms:show k_page_link />">
+                                <img class="card-img-top" src="<cms:show cover_image />" style="height:408px;">
+                                <div class="card-img-overlay bg-overlay">
+                                    <h4 class="card-title"><cms:show k_page_title /></h4>
+                                    <span class="badge bg-primary"><cms:show read_content_type /></span>
+                                    <span class="badge bg-secondary"><cms:show k_page_foldertitle /></span>
+                                    <p class="card-text">
+                                        <cms:date k_page_date format='jS M Y'/> &#8226; by <i><cms:show read_author /></i><br>
+                                        <cms:excerpt count="100" truncate_chars="1" trail="..."><cms:show read_content /></cms:excerpt>
+                                    </p>
+                                </div>
+                            </a>
+                        </cms:pages>
                     </div>
                     <div class="tile-group">
-                        <a class="card tile" href="https://duckduckgo.com">
-                            <img class="card-img-top" src="assets/medium.jpg">
-                            <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">What came first - the chicken or the egg?</h4>
-                                <span class="badge bg-primary">Opinion</span>
-                                <span class="badge bg-secondary">Science</span>
-                                <p class="card-text">13/9/22 &#8226; by <i>Some One</i></p>
-                            </div>
-                        </a>
+                        <cms:pages masterpage='read.php' orderby='publish_date' order='desc' limit='1' offset='7'>
+                            <a class="card tile" href="<cms:show k_page_link />">
+                                <img class="card-img-top" src="<cms:show cover_image />">
+                                <div class="card-img-overlay bg-overlay">
+                                    <h4 class="card-title"><cms:show k_page_title /></h4>
+                                    <span class="badge bg-primary"><cms:show read_content_type /></span>
+                                    <span class="badge bg-secondary"><cms:show k_page_foldertitle /></span>
+                                    <p class="card-text">
+                                        <cms:date k_page_date format='jS M Y'/> &#8226; by <i><cms:show read_author /></i><br>
+                                    </p>
+                                </div>
+                            </a>
+                        </cms:pages>
                     </div>
                 </div>
             </div>
@@ -147,50 +189,67 @@
             <div class="feature" style="flex:6">
                 <div class="column">
                     <div class="tile-group">
-                        <a class="card tile" href="https://duckduckgo.com">
-                            <img class="card-img-top" src="assets/large.png">
-                            <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">test podcast</h4>
-                                <span class="badge bg-primary">Opinion</span>
-                                <span class="badge bg-secondary">test category</span>
-                                <p class="card-text">Episode 3</p>
-                            </div>
-                        </a>
+                        <cms:pages masterpage='listen.php' orderby='publish_date' order='desc' limit='1'>
+                            <a class="card tile" href="<cms:show k_page_link />">
+                                <img class="card-img-top" src="<cms:show cover_image />">
+                                <div class="card-img-overlay bg-overlay">
+                                    <h4 class="card-title"><cms:show k_page_title /></h4>
+                                    <span class="badge bg-primary"><cms:show listen_content_type /></span>
+                                    <span class="badge bg-secondary"><cms:show k_page_foldertitle /></span>
+                                    <p class="card-text">
+                                        <cms:date k_page_date format='jS M Y'/> &#8226; by <i><cms:show listen_author /></i><br>
+                                    </p>
+                                </div>
+                            </a>
+                        </cms:pages>
                     </div>
                     <div class="tile-group">
-                        <a class="card tile" href="https://duckduckgo.com">
-                            <img class="card-img-top" src="assets/medium3.jpg">
-                            <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">test podcast 2</h4>
-                                <span class="badge bg-primary">Opinion</span>
-                                <p class="card-text">Episode 5</p>
-                            </div>
-                        </a>
+                        <cms:pages masterpage='listen.php' orderby='publish_date' order='desc' limit='1' offset='1'>
+                            <a class="card tile" href="<cms:show k_page_link />">
+                                <img class="card-img-top" src="<cms:show cover_image />">
+                                <div class="card-img-overlay bg-overlay">
+                                    <h4 class="card-title"><cms:show k_page_title /></h4>
+                                    <span class="badge bg-primary"><cms:show listen_content_type /></span>
+                                    <span class="badge bg-secondary"><cms:show k_page_foldertitle /></span>
+                                    <p class="card-text">
+                                        <cms:date k_page_date format='jS M Y'/> &#8226; by <i><cms:show listen_author /></i><br>
+                                    </p>
+                                </div>
+                            </a>
+                        </cms:pages>
                     </div>
                 </div>
     
                 <div class="column">
                     <div class="tile-group">
-                        <a class="card tile" href="https://duckduckgo.com">
-                            <img class="card-img-top" src="assets/medium.jpg">
-                            <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">test podcast 3</h4>
-                                <span class="badge bg-primary">Opinion</span>
-                                <span class="badge bg-secondary">another category</span>
-                                <p class="card-text">Episode 1</p>
-                            </div>
-                        </a>
+                        <cms:pages masterpage='listen.php' orderby='publish_date' order='desc' limit='1' offset='2'>
+                            <a class="card tile" href="<cms:show k_page_link />">
+                                <img class="card-img-top" src="<cms:show cover_image />">
+                                <div class="card-img-overlay bg-overlay">
+                                    <h4 class="card-title"><cms:show k_page_title /></h4>
+                                    <span class="badge bg-primary"><cms:show listen_content_type /></span>
+                                    <span class="badge bg-secondary"><cms:show k_page_foldertitle /></span>
+                                    <p class="card-text">
+                                        <cms:date k_page_date format='jS M Y'/> &#8226; by <i><cms:show listen_author /></i><br>
+                                    </p>
+                                </div>
+                            </a>
+                        </cms:pages>
                     </div>
                     <div class="tile-group">
-                        <a class="card tile" href="https://duckduckgo.com">
-                            <img class="card-img-top" src="assets/medium2.jpg">
-                            <div class="card-img-overlay bg-overlay">
-                                <h4 class="card-title">test podcast 4</h4>
-                                <span class="badge bg-danger">News & Factual</span>
-                                <span class="badge bg-secondary">Science</span>
-                                <p class="card-text">Episode 43</p>
-                            </div>
-                        </a>
+                        <cms:pages masterpage='listen.php' orderby='publish_date' order='desc' limit='1' offset='3'>
+                            <a class="card tile" href="<cms:show k_page_link />">
+                                <img class="card-img-top" src="<cms:show cover_image />">
+                                <div class="card-img-overlay bg-overlay">
+                                    <h4 class="card-title"><cms:show k_page_title /></h4>
+                                    <span class="badge bg-primary"><cms:show listen_content_type /></span>
+                                    <span class="badge bg-secondary"><cms:show k_page_foldertitle /></span>
+                                    <p class="card-text">
+                                        <cms:date k_page_date format='jS M Y'/> &#8226; by <i><cms:show listen_author /></i><br>
+                                    </p>
+                                </div>
+                            </a>
+                        </cms:pages>
                     </div>
                 </div>
             </div>
@@ -208,34 +267,55 @@
             <div class="feature" style="flex:6;">
                 <div class="column">
                         <div class="tile-group">
-                            <a class="card tile" href="https://duckduckgo.com">
-                                <img class="card-img-top" src="assets/medium2.jpg">
-                                <div class="card-img-overlay bg-overlay">
-                                    <h4 class="card-title">album</h4>
-                                </div>
-                            </a>
+                            <cms:pages masterpage='watch.php' orderby='publish_date' order='desc' limit='1'>
+                                <a class="card tile" href="<cms:show k_page_link />">
+                                    <img class="card-img-top" src="<cms:show cover_image />">
+                                    <div class="card-img-overlay bg-overlay">
+                                        <h4 class="card-title"><cms:show k_page_title /></h4>
+                                        <span class="badge bg-primary"><cms:show watch_content_type /></span>
+                                        <span class="badge bg-secondary"><cms:show k_page_foldertitle /></span>
+                                        <p class="card-text">
+                                            <cms:date k_page_date format='jS M Y'/> &#8226; by <i><cms:show watch_author /></i><br>
+                                        </p>
+                                    </div>
+                                </a>
+                            </cms:pages>
                         </div>
                     </div>
 
                     <div class="column">
                         <div class="tile-group">
-                            <a class="card tile" href="https://duckduckgo.com">
-                                <img class="card-img-top" src="assets/medium.jpg">
-                                <div class="card-img-overlay bg-overlay">
-                                    <h4 class="card-title">album 2</h4>
-                                </div>
-                            </a>
+                            <cms:pages masterpage='watch.php' orderby='publish_date' order='desc' limit='1' offset='1'>
+                                <a class="card tile" href="<cms:show k_page_link />">
+                                    <img class="card-img-top" src="<cms:show cover_image />">
+                                    <div class="card-img-overlay bg-overlay">
+                                        <h4 class="card-title"><cms:show k_page_title /></h4>
+                                        <span class="badge bg-primary"><cms:show watch_content_type /></span>
+                                        <span class="badge bg-secondary"><cms:show k_page_foldertitle /></span>
+                                        <p class="card-text">
+                                            <cms:date k_page_date format='jS M Y'/> &#8226; by <i><cms:show watch_author /></i><br>
+                                        </p>
+                                    </div>
+                                </a>
+                            </cms:pages>
                         </div>
                     </div>
 
                     <div class="column">
                         <div class="tile-group">
-                            <a class="card tile" href="https://duckduckgo.com">
-                                <img class="card-img-top" src="assets/large.png">
-                                <div class="card-img-overlay bg-overlay">
-                                    <h4 class="card-title">another album</h4>
-                                </div>
-                            </a>
+                            <cms:pages masterpage='watch.php' orderby='publish_date' order='desc' limit='1' offset='1'>
+                                <a class="card tile" href="<cms:show k_page_link />">
+                                    <img class="card-img-top" src="<cms:show cover_image />">
+                                    <div class="card-img-overlay bg-overlay">
+                                        <h4 class="card-title"><cms:show k_page_title /></h4>
+                                        <span class="badge bg-primary"><cms:show watch_content_type /></span>
+                                        <span class="badge bg-secondary"><cms:show k_page_foldertitle /></span>
+                                        <p class="card-text">
+                                            <cms:date k_page_date format='jS M Y'/> &#8226; by <i><cms:show watch_author /></i><br>
+                                        </p>
+                                    </div>
+                                </a>
+                            </cms:pages>
                         </div>
                     </div>
             </div>

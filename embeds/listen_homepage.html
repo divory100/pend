@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="css/tile.css">
         <link rel="stylesheet" type="text/css" href="css/pagination.css">
         <link rel="stylesheet" type="text/css" href="css/listview.css">
+        <link rel="stylesheet" type="text/css" href="css/listen.css">
 
         <!--JS tools for various things, mainly for filtering content-->
         <script src="js/utils.js"></script>
@@ -18,6 +19,12 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!--settings for viewing website on a phone-->
+
+        <style>
+            .bg-primary {
+                background-color: #0dcaf0 !important;
+            }
+        </style>
     </head>
 
     <body>
@@ -60,7 +67,7 @@
                 </form>
             </div>
 
-            <cms:pages masterpage="listen.php" folder=k_folder_name custom_field="listen_content_type=<cms:gpc 'ct' />" paginate="1" limit="10">
+            <cms:pages masterpage="listen.php" folder=k_folder_name orderby='publish_date' order='desc' custom_field="listen_content_type=<cms:gpc 'ct' />" paginate="1" limit="10">
                 <!--get category-->
                 <cms:if k_page_foldertitle>
                     <cms:set post_category=k_page_foldertitle />

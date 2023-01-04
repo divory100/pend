@@ -47,6 +47,8 @@ in that case, make sure mpm_worker_module and mpm_event_module are uncommented
 5. uncomment `;extension=mysqli` in /etc/php/php.ini
    NOTE: it may be `extension=php_mysql.dll` AND `extension=php_mysqli.dll` instead
 
+6. Change 'post_max_size' in php.ini
+
 ## 4. SQL/database setup
 1. install mariadb 
 2. run `sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql`

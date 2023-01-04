@@ -31,6 +31,12 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!--settings for viewing website on a phone-->
+
+        <style>
+            .bg-primary {
+                background-color: #0dcaf0 !important;
+            }
+        </style>
     </head>
     <body>
         <div class="pagewide p-1 fixed-top">

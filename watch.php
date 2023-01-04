@@ -1,5 +1,5 @@
 <?php require_once( 'couch/cms.php' ); ?>
-<cms:template title='Read • Content' clonable="1" dynamic_folders="1">
+<cms:template title='Watch • Content' clonable="1" dynamic_folders="1">
 
     <cms:editable label="Author*" name="watch_author" type="text" />
     <cms:editable label="Content Type*" desc="Type of content, for example Film or Documentary" name="watch_content_type" type="text" />
@@ -31,6 +31,12 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!--settings for viewing website on a phone-->
+
+        <style>
+            .bg-primary {
+                background-color: blueviolet !important;
+            }
+        </style>
     </head>
     <body>
         <div class="pagewide p-1 fixed-top">

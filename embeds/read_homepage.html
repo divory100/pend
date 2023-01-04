@@ -63,7 +63,7 @@
                 </form>
             </div>
 
-            <cms:pages masterpage="read.php" folder=k_folder_name custom_field="read_content_type=<cms:gpc 'ct' />" paginate="1" limit="10">
+            <cms:pages masterpage="read.php" folder=k_folder_name orderby='publish_date' order='desc' custom_field="read_content_type=<cms:gpc 'ct' />" paginate="1" limit="10">
                 <!--get category-->
                 <cms:if k_page_foldertitle>
                     <cms:set post_category=k_page_foldertitle />

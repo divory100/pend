@@ -53,7 +53,7 @@ These sizings mean nothing if there is only one column*/
 
 /*the core building block: any article/podcast/album/video on the homepage must be a tile*/
 .tile {
-    background-color: white;
+    background-color: #8a8989 !important;
     border: solid #dbdbdb 1px;
     flex: 2;
     overflow: hidden;
@@ -62,6 +62,10 @@ These sizings mean nothing if there is only one column*/
     font-family: courier;
     display:block;
     text-decoration: none;
+}
+
+.tile h4 {
+    font-size: 20px;
 }
 
 /*old version that doesnt allow for side borders, may reuse later

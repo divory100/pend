@@ -76,6 +76,14 @@ Last updated 27/7/2022
     .sidebar {
         display:none;
     }
+
+    .tile h4 {
+        font-size: 16px;
+    }
+
+    .tile p {
+        font-size: 12px;
+    }
 }
 
 /*Show title banner above grid when screen is narrow*/
@@ -88,4 +96,13 @@ Last updated 27/7/2022
 /*holder for columns. There is one for read, listen, and watch*/
 .feature {
     display: flex;
+}
+
+/*category badges*/
+#listen .bg-primary {
+    background-color: #0dcaf0 !important;
+}
+
+#watch .bg-primary {
+    background-color: blueviolet !important;
 }

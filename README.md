@@ -11,3 +11,4 @@
 - [ ] upload some real content
 - [ ] couch pretty urls (leave until very end)
 - [ ] mobile site
+- [ ] comments

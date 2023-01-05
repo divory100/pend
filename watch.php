@@ -5,6 +5,8 @@
     <cms:editable label="Content Type*" desc="Type of content, for example Film or Documentary" name="watch_content_type" type="text" />
     <cms:editable label="File*" desc="The video or photo/photo album" name="watch_content" type="file" />
 
+    <cms:editable label="Description" desc="optional: A paragraph displayed on the video's page" name="watch_desc" type="richtext" toolbar="full"/>
+
     <cms:editable label="Main Image" desc="optional: The large image that appears at the top of the page" name="top_image"
         width='100%'
         height=' 400'
@@ -76,8 +78,15 @@
                 <img id="top-image" src="<cms:show top_image />" width=100% height=400px>
             </cms:if>
 
+            <div>
+                <video width="100%" controls>
+                    <source src="<cms:show watch_content />">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+
             <div class="text-body">
-                <cms:show watch_content />
+                <cms:show watch_desc />
             </div>
         </main>
     </body>

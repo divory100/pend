@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/comments.css">
+    </head>
+    <body>
+        <cms:if k_is_commentable >
+            <div class="comment-form" >
+                <h3>Add a comment</h3>
+
+                <cms:form method="post" class="k_form">
+
+                    <cms:if k_success >
+
+                        <cms:process_comment />
+
+                        <cms:if k_process_comment_success>
+                            <cms:send_mail from=k_email_from to=k_email_to subject='Comment posted'>
+                                You have posted a comment successfully:
+                                <cms:show k_success />
+                            </cms:send_mail>
+
+                            <div class="k_successmessage">
+                                <p>
+                                    Thank you for your comment.<br>
+                                    It will be published as soon as it has been approved.
+                                </p>
+                            </div>
+                        <cms:else />
+                            <div class="k_errormessage">
+                                <p>
+                                    Error while processing comment:<br>
+                                    <cms:show k_process_comment_error />
+                                </p>
+                            </div>
+
+                        </cms:if>
+
+                    <cms:else />
+
+                        <cms:if k_error >
+                            <div class="k_errormessage">
+                                <p style="color:rgb(172, 50, 50)">There are errors in your input, please correct them:<p>
+                                <ul>
+                                    <cms:each k_error >
+                                        <li><cms:show item /></li>
+                                    </cms:each>
+                                </ul>
+                            </div>
+                        </cms:if>
+
+                        <cms:if k_logged_out >
+                            <p class="comment-input" style="float:left;margin-right:10px;">
+                                <label for="author"><small>Name *</small></label><br>
+                                <cms:input type="text" name="k_author" size="22" tabindex="1" required="1"/>
+                            </p>
+
+                            <p class="comment-input" style="float:left;">
+                                <label for="email"><small>Email * (Not displayed)</small></label><br>
+                                <cms:input type="text" name="k_email" size="22" tabindex="2" validator="email" required="1"/>
+                            </p>
+                        <cms:else />
+                            <p>
+                                Logged in as <b><cms:show k_user_title /></b>.
+                                <a href="<cms:show k_logout_link />" onclick="if( confirm('Are you sure you want to logout?') ) { return true; } return false;">Logout &raquo;</a>
+                            </p>
+                        </cms:if>
+
+                        <p class="comment-input">
+                            <cms:input type="textarea" name="k_comment" style="width:100%" rows="5" cols="10" tabindex="4"
+                                validator_msg="required=Please enter a comment"
+                                required="1" />
+                            <!--
+                            <br>
+                            <small>
+                            <cms:html_encode>
+                                You can use these HTML tags in your comment: <a><br><strong><b><em><i><blockquote><code><ul><ol><li><del>
+                            </cms:html_encode>
+                            </small>-->
+                        </p>
+
+                        
+                        <cms:if k_logged_out >
+                            <p class="comment-input">
+                                <!--<label for="captcha"><small>Please enter the word from the captcha below</small></label><br>-->
+                                <cms:input type="captcha" name="captcha" format='i-r-t' />
+                            </p>
+                        </cms:if>
+
+                        <cms:input id="submit-btn" type="submit" value="Submit >" name="submit"/>
+
+                    </cms:if>
+                </cms:form>
+
+            </div>
+        </cms:if>
+    </body>
+</html>

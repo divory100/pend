@@ -1,14 +1,8 @@
 <?php require_once( 'couch/cms.php' ); ?>
-<cms:template title="Homepage" />
+<cms:template title="Homepage - Mobile" />
 <!DOCTYPE html>
 <html>
     <head>
-        <script type="text/javascript">
-        if (screen.width <= 699) {
-            document.location = "m.php";
-        }
-        </script>
-        
         <title>
             <cms:editable name="page_title" type="text">
                 Pend

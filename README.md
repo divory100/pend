@@ -10,5 +10,5 @@
 - [x] photo/video list view
 - [ ] upload some real content
 - [ ] couch pretty urls (leave until very end)
-- [ ] mobile site
+- [ ] mobile site: use jquery to switch navbar on each page to the bottom and have symbols
 - [ ] comments

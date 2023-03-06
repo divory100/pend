@@ -1,3 +1,4 @@
+//LISTVIEW FILTERS
 function applyListFilter() {
     //called whenever a user presses "Filter" on one of the list view filter forms.
     //Will produce a url with couchcms filtering parameters and redirect the user to that url.
@@ -38,4 +39,14 @@ function applyListFilter() {
 function resetListFilter() {
     //strip parameters and redirect
     window.location = window.location.protocol + '//' + window.location.host + window.location.pathname;
+}
+
+
+//MOBILE SITE
+//obsolete
+function mobileAdjust() {
+    if (screen.width <= 699) {
+        console.log("changing to fixed bottom");
+        document.getElementById("pend-navbar").className = "navbar navbar-expand-sm fixed-bottom justify-content-center custom-nav";
+    }
 }

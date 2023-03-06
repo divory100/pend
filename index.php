@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- MOBILE RELOCATION SCRIPT (OBSOLETE)
         <script type="text/javascript">
         if (screen.width <= 699) {
             document.location = "m.php";
         }
-        </script>
+        </script>-->
         
         <title>
             <cms:editable name="page_title" type="text">
@@ -20,6 +21,8 @@
         <link rel="stylesheet" type="text/css" href="css/navbar.css">
         <link rel="stylesheet" type="text/css" href="css/home.css">
         <link rel="stylesheet" type="text/css" href="css/tile.css">
+
+        <script src="js/utils.js"></script>
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -31,8 +34,9 @@
         <div class="pagewide p-1 fixed-top">
             <div class="container"><img src="assets/logo.jpg" height=60px></div>
         </div>
-      
-        <nav role="navigation" style="top:60px;" class="navbar navbar-expand-sm fixed-top justify-content-center custom-nav">
+        
+        <!--Default navbar (top)-->
+        <nav id="pend-navbar" role="navigation" style="top:60px;" class="navbar navbar-expand-sm fixed-top justify-content-center custom-nav">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link h-active" href="<cms:link masterpage='index.php' />">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="<cms:link masterpage='read.php' />">Read</a></li>
@@ -324,6 +328,18 @@
                 <a style="color:blueviolet !important;" href="watch.php">WATCH &#10095;</a>
             </div>
         </div>
+
+        <!--mobile navbar (bottom, symbols)-->
+        <footer id="pend-navbar-m" class="fixed-bottom mt-auto footer py-3">
+            <div class="container">
+                <span style="display:float">   
+                    <a href="<cms:link masterpage='index.php' />"><img src="assets/home.png" width=50px height=50px></a>
+                    <a href="<cms:link masterpage='read.php' />"><img src="assets/read.png" width=50px height=50px></a>
+                    <a href="<cms:link masterpage='listen.php' />">Listen</a>
+                    <a href="<cms:link masterpage='watch.php' />">Watch</a>
+                </span>
+            </div>
+        </footer>
 
     </body>
 </html>

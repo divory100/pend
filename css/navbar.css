@@ -25,6 +25,40 @@ nav .navbar-nav li a{
     top: 60px;
 }
 
+/*IMPORTANT: switch to mobile version of navbar and vice versa depending on screen size*/
+@media (max-width: 699px) {
+    #pend-navbar {
+        display: none;
+    }
+}
+
+@media (min-width: 700px) {
+    #pend-navbar-m {
+        display: none;
+    }
+}
+
+#pend-navbar-m {
+    background-color: black;
+    color: white;
+    text-align:center;
+    border-top: solid white 2px;
+}
+
+#pend-navbar-m a {
+    width:50px;
+    height:50px;
+    display:inline-block;
+    color: white !important;
+    text-decoration: none !important;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+#pend-navbar-m a:hover {
+    background-color: #252525;
+}
+
 /*Different border colours for different nav links*/
 .h-active {
     border-bottom: solid red 1px;

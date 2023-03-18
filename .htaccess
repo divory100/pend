@@ -24,6 +24,14 @@ RewriteCond %{REQUEST_FILENAME} -d [OR]
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule . - [L]
 
+#watch.php
+RewriteRule ^watch$ "$0/" [R=301,L,QSA]
+RewriteRule ^watch/$ watch.php [L,QSA]
+RewriteRule ^watch/.*?([^\.\/]*)\.html$ watch.php?pname=$1 [L,QSA]
+RewriteRule ^watch/([1-2]\d{3})/(?:(0[1-9]|1[0-2])/(?:(0[1-9]|1[0-9]|2[0-9]|3[0-1])/)?)?$ watch.php?d=$1$2$3 [L,QSA]
+RewriteRule ^watch/[^\.]*?([^/\.]*)/$ watch.php?fname=$1 [L,QSA]
+RewriteRule ^watch/[^\.]*?([^/\.]*)$ "$0/" [R=301,L,QSA]
+
 #read.php
 RewriteRule ^read$ "$0/" [R=301,L,QSA]
 RewriteRule ^read/$ read.php [L,QSA]
@@ -31,6 +39,14 @@ RewriteRule ^read/.*?([^\.\/]*)\.html$ read.php?pname=$1 [L,QSA]
 RewriteRule ^read/([1-2]\d{3})/(?:(0[1-9]|1[0-2])/(?:(0[1-9]|1[0-9]|2[0-9]|3[0-1])/)?)?$ read.php?d=$1$2$3 [L,QSA]
 RewriteRule ^read/[^\.]*?([^/\.]*)/$ read.php?fname=$1 [L,QSA]
 RewriteRule ^read/[^\.]*?([^/\.]*)$ "$0/" [R=301,L,QSA]
+
+#listen.php
+RewriteRule ^listen$ "$0/" [R=301,L,QSA]
+RewriteRule ^listen/$ listen.php [L,QSA]
+RewriteRule ^listen/.*?([^\.\/]*)\.html$ listen.php?pname=$1 [L,QSA]
+RewriteRule ^listen/([1-2]\d{3})/(?:(0[1-9]|1[0-2])/(?:(0[1-9]|1[0-9]|2[0-9]|3[0-1])/)?)?$ listen.php?d=$1$2$3 [L,QSA]
+RewriteRule ^listen/[^\.]*?([^/\.]*)/$ listen.php?fname=$1 [L,QSA]
+RewriteRule ^listen/[^\.]*?([^/\.]*)$ "$0/" [R=301,L,QSA]
 
 #index.php
 RewriteRule ^.*?([^\.\/]*)\.html$ ?pname=$1 [L,QSA]

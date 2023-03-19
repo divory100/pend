@@ -37,3 +37,16 @@ body {
     clear: both;
     display: table;
 }
+
+/*mobile settings*/
+@media (max-width: 699px) {
+    #desktop-breaker {
+        display: none;
+    }
+}
+
+@media (min-width: 700px) {
+    #mobile-breaker {
+        display: none;
+    }
+}

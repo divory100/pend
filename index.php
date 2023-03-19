@@ -45,7 +45,13 @@
             </ul>
         </nav>
       
-        <div class="container-fluid invis-breaker"></div>
+        <div id="desktop-breaker" class="container-fluid invis-breaker"></div>
+        
+        <div id="mobile-breaker">
+            <br>
+            <br>
+            <br>
+        </div>
 
         <div class="container-fluid" id="read">
             <div class="sidebar">
@@ -329,14 +335,16 @@
             </div>
         </div>
 
+        <div id="mobile-breaker" class="container-fluid invis-breaker"></div>
+
         <!--mobile navbar (bottom, symbols)-->
-        <footer id="pend-navbar-m" class="fixed-bottom mt-auto footer py-3">
+        <footer id="pend-navbar-m" class="fixed-bottom mt-auto footer ">
             <div class="container">
                 <span style="display:float">   
-                    <a href="<cms:link masterpage='index.php' />"><img src="assets/home.png" width=50px height=50px></a>
-                    <a href="<cms:link masterpage='read.php' />"><img src="assets/read.png" width=50px height=50px></a>
-                    <a href="<cms:link masterpage='listen.php' />">Listen</a>
-                    <a href="<cms:link masterpage='watch.php' />">Watch</a>
+                    <a href="<cms:link masterpage='index.php' />"><img src="assets/home.png" width=40px height=40px></a>
+                    <a href="<cms:link masterpage='read.php' />"><img src="assets/read.png" width=40px height=40px></a>
+                    <a href="<cms:link masterpage='listen.php' />"><img src="assets/microphone.png" width=40px height=40px></a>
+                    <a href="<cms:link masterpage='watch.php' />"><img src="assets/watch.png" width=40px height=40px></a>
                 </span>
             </div>
         </footer>

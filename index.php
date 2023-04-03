@@ -31,12 +31,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!--settings for viewing website on a phone-->
     </head>
     <body>
-        <div class="pagewide p-1 fixed-top">
+        <div id="logo-banner" class="pagewide p-1 fixed-top">
             <div class="container"><img src="assets/logo.jpg" height=60px></div>
         </div>
         
         <!--Default navbar (top)-->
-        <nav id="pend-navbar" role="navigation" style="top:60px;" class="navbar navbar-expand-sm fixed-top justify-content-center custom-nav">
+        <nav id="pend-navbar-dtop" role="navigation" style="top:60px;" class="pend-navbar navbar navbar-expand-sm fixed-top justify-content-center custom-nav">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link h-active" href="<cms:link masterpage='index.php' />">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="<cms:link masterpage='read.php' />">Read</a></li>
@@ -47,7 +47,7 @@
       
         <div id="desktop-breaker" class="container-fluid invis-breaker"></div>
         
-        <div id="mobile-breaker">
+        <div class="mobile-breaker">
             <br>
             <br>
             <br>
@@ -335,10 +335,90 @@
             </div>
         </div>
 
-        <div id="mobile-breaker" class="container-fluid invis-breaker"></div>
+
+        <!--Mobile versions of homepage tiles-->
+        <div id="read-m">
+
+            <cms:pages masterpage="read.php" folder=k_folder_name orderby='publish_date' order='desc' limit="4">
+                <!--get category-->
+                <cms:if k_page_foldertitle>
+                    <cms:set post_category=k_page_foldertitle />
+                <cms:else />
+                    <cms:set post_category="Uncategorised" />
+                </cms:if>
+
+                <a class="card tile" style="display:block;height:190px;width:98% !important;margin:2px !important;border-radius:4px !important;" href="<cms:show k_page_link />">
+                    <img class="card-img-top" src="<cms:show cover_image />" style="height:190px;border-left:solid #0d6efd 5px;">
+                    <div class="card-img-overlay bg-overlay">
+                        <h4 class="card-title"><cms:show k_page_title /></h4>
+                        <span class="badge bg-primary"><cms:show read_content_type /></span>
+                        <span class="badge bg-secondary"><cms:show post_category /></span>
+                        <p class="card-text">
+                            <cms:date k_page_date format='jS M Y'/> &#8226; by <i><cms:show read_author /></i><br>
+                            <cms:excerpt count="65" truncate_chars="1" trail="..."><cms:show read_content /></cms:excerpt>
+                        </p>
+                    </div>
+                </a>
+
+            </cms:pages>
+        </div>
+
+        <div id="listen-m">
+
+            <cms:pages masterpage="listen.php" folder=k_folder_name orderby='publish_date' order='desc' limit="4">
+                <!--get category-->
+                <cms:if k_page_foldertitle>
+                    <cms:set post_category=k_page_foldertitle />
+                <cms:else />
+                    <cms:set post_category="Uncategorised" />
+                </cms:if>
+
+                <a class="card tile" style="display:block;height:190px;width:98% !important;margin:2px !important;border-radius:4px !important;" href="<cms:show k_page_link />">
+                    <img class="card-img-top" src="<cms:show cover_image />" style="height:190px;border-left:solid #0d6efd 5px;">
+                    <div class="card-img-overlay bg-overlay">
+                        <h4 class="card-title"><cms:show k_page_title /></h4>
+                        <span class="badge bg-primary"><cms:show listen_content_type /></span>
+                        <span class="badge bg-secondary"><cms:show post_category /></span>
+                        <p class="card-text">
+                            <cms:date k_page_date format='jS M Y'/> &#8226; by <i><cms:show listen_author /></i><br>
+                            <cms:excerpt count="65" truncate_chars="1" trail="..."><cms:show listen_desc /></cms:excerpt>
+                        </p>
+                    </div>
+                </a>
+
+            </cms:pages>
+        </div>
+
+        <div id="watch-m">
+
+            <cms:pages masterpage="watch.php" folder=k_folder_name orderby='publish_date' order='desc' limit="4">
+                <!--get category-->
+                <cms:if k_page_foldertitle>
+                    <cms:set post_category=k_page_foldertitle />
+                <cms:else />
+                    <cms:set post_category="Uncategorised" />
+                </cms:if>
+
+                <a class="card tile" style="display:block;height:190px;width:98% !important;margin:2px !important;border-radius:4px !important;" href="<cms:show k_page_link />">
+                    <img class="card-img-top" src="<cms:show cover_image />" style="height:190px;border-left:solid #0d6efd 5px;">
+                    <div class="card-img-overlay bg-overlay">
+                        <h4 class="card-title"><cms:show k_page_title /></h4>
+                        <span class="badge bg-primary"><cms:show watch_content_type /></span>
+                        <span class="badge bg-secondary"><cms:show post_category /></span>
+                        <p class="card-text">
+                            <cms:date k_page_date format='jS M Y'/> &#8226; by <i><cms:show watch_author /></i><br>
+                            <cms:excerpt count="65" truncate_chars="1" trail="..."><cms:show watch_desc /></cms:excerpt>
+                        </p>
+                    </div>
+                </a>
+
+            </cms:pages>
+        </div>
+
+        <div class="mobile-breaker container-fluid invis-breaker"></div>
 
         <!--mobile navbar (bottom, symbols)-->
-        <footer id="pend-navbar-m" class="fixed-bottom mt-auto footer ">
+        <footer class="pend-navbar-m fixed-bottom mt-auto footer ">
             <div class="container">
                 <span style="display:float">   
                     <a href="<cms:link masterpage='index.php' />"><img src="assets/home.png" width=40px height=40px></a>

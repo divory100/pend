@@ -29,6 +29,26 @@ Last updated 27/7/2022
     border-right: solid blueviolet 1px;
 }
 
+/*IMPORTANT: switch to mobile version of homepage tiles and vice versa depending on screen size*/
+@media (max-width: 699px) {
+    #read, #listen, #watch {
+        display: none;
+    }
+}
+
+@media (min-width: 700px) {
+    #read-m, #listen-m, #watch-m {
+        display: none;
+    }
+}
+
+@media (min-width: 1300px) {
+    .tile {
+        float:left;
+        width: 49% !important;
+    }
+}
+
 .container-fluid {
     display: flex;
     flex-direction: row;

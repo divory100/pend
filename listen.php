@@ -42,20 +42,27 @@
         </style>
     </head>
     <body>
-        <div class="pagewide p-1 fixed-top">
+        <div id="logo-banner" class="pagewide p-1 fixed-top">
             <div class="container"><img src="assets/logo.jpg" height=60px></div>
         </div>
-      
-        <nav role="navigation" style="top:60px;" class="navbar navbar-expand-sm fixed-top justify-content-center custom-nav">
+        
+        <!--Default navbar (top)-->
+        <nav id="pend-navbar-dtop" role="navigation" style="top:60px;" class="pend-navbar navbar navbar-expand-sm fixed-top justify-content-center custom-nav">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="<cms:link masterpage='index.php' />">Home</a></li>
+                <li class="nav-item"><a class="nav-link h-active" href="<cms:link masterpage='index.php' />">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="<cms:link masterpage='read.php' />">Read</a></li>
-                <li class="nav-item"><a class="nav-link l-active" href="<cms:link masterpage='listen.php' />">Listen</a></li>
+                <li class="nav-item"><a class="nav-link" href="<cms:link masterpage='listen.php' />">Listen</a></li>
                 <li class="nav-item"><a class="nav-link" href="<cms:link masterpage='watch.php' />">Watch</a></li>
             </ul>
         </nav>
       
-        <div class="container-fluid invis-breaker"></div>
+        <div id="desktop-breaker" class="container-fluid invis-breaker"></div>
+        
+        <div class="mobile-breaker">
+            <br>
+            <br>
+            <br>
+        </div>
 
         <main class="container" style="padding-top:5px;padding-bottom:5px;" id="read-main">
             <div class="title" style="border-color: #0dcaf0 !important;">
@@ -110,6 +117,20 @@
                 </cms:if>
             </div>
         </main>
+
+        <div class="mobile-breaker container-fluid invis-breaker"></div>
+
+        <!--mobile navbar (bottom, symbols)-->
+        <footer class="pend-navbar-m fixed-bottom mt-auto footer ">
+            <div class="container">
+                <span style="display:float">   
+                    <a href="<cms:link masterpage='index.php' />"><img src="assets/home.png" width=40px height=40px></a>
+                    <a href="<cms:link masterpage='read.php' />"><img src="assets/read.png" width=40px height=40px></a>
+                    <a href="<cms:link masterpage='listen.php' />"><img src="assets/microphone.png" width=40px height=40px></a>
+                    <a href="<cms:link masterpage='watch.php' />"><img src="assets/watch.png" width=40px height=40px></a>
+                </span>
+            </div>
+        </footer>
     </body>
 </html>
 <cms:else />

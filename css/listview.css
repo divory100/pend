@@ -50,3 +50,22 @@
     background-color:#ac2c27;
 }
 
+/*IMPORTANT: switch to mobile version of filter buttons and vice versa depending on screen size*/
+@media (max-width: 699px) {
+    .filter-options #btn-filter {
+        width: 76%;
+    }
+
+    .filter-options #btn-reset {
+        width: 22%;
+    }
+
+    .filter-options select {
+        width: 49%;
+    }
+
+    .filter-options #btn-filter, .filter-options #btn-reset {
+        margin-top: 4px;
+    }
+}
+

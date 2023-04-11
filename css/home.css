@@ -119,10 +119,28 @@ Last updated 27/7/2022
 }
 
 /*category badges*/
-#listen .bg-primary {
+#listen .bg-primary, #listen-m .bg-primary {
     background-color: #0dcaf0 !important;
 }
 
-#watch .bg-primary {
+#watch .bg-primary, #watch-m .bg-primary {
     background-color: blueviolet !important;
+}
+
+/*Mobile section header links*/
+.section-link-m {
+    display:block;
+    height:25px;
+    width:100%;
+    margin:0px !important;
+    font-size:12px;
+    padding:2px !important;
+    text-decoration:none !important;
+    background-color: #0d6efd;
+}
+
+.section-link-m h4 {
+    color: white;
+    font-family: Courier;
+    text-align:center;
 }

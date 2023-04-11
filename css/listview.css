@@ -62,6 +62,7 @@
 
     .filter-options select {
         width: 49%;
+        font-size: 15px;
     }
 
     .filter-options #btn-filter, .filter-options #btn-reset {

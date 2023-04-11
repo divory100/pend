@@ -17,10 +17,10 @@
         </title>
 
         
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-        <link rel="stylesheet" type="text/css" href="css/navbar.css">
-        <link rel="stylesheet" type="text/css" href="css/home.css">
-        <link rel="stylesheet" type="text/css" href="css/tile.css">
+        <link rel="stylesheet" type="text/css" href="<cms:show k_site_link />css/main.css">
+        <link rel="stylesheet" type="text/css" href="<cms:show k_site_link />css/navbar.css">
+        <link rel="stylesheet" type="text/css" href="<cms:show k_site_link />css/home.css">
+        <link rel="stylesheet" type="text/css" href="<cms:show k_site_link />css/tile.css">
 
         <script src="js/utils.js"></script>
         
@@ -338,6 +338,11 @@
 
         <!--Mobile versions of homepage tiles-->
         <div id="read-m">
+            <a class="section-link-m" href="<cms:link masterpage='read.php' />">
+                <div>
+                    <h4 class="card-title">Read</h4>
+                </div>
+            </a>
 
             <cms:pages masterpage="read.php" folder=k_folder_name orderby='publish_date' order='desc' limit="4">
                 <!--get category-->
@@ -365,6 +370,12 @@
 
         <div id="listen-m">
 
+            <a class="section-link-m" style="background-color:#0dcaf0;margin-top:5px !important;" href="<cms:link masterpage='listen.php' />">
+                <div>
+                    <h4 class="card-title">Listen</h4>
+                </div>
+            </a>
+
             <cms:pages masterpage="listen.php" folder=k_folder_name orderby='publish_date' order='desc' limit="4">
                 <!--get category-->
                 <cms:if k_page_foldertitle>
@@ -374,7 +385,7 @@
                 </cms:if>
 
                 <a class="card tile" style="display:block;height:190px;width:98% !important;margin:2px !important;border-radius:4px !important;" href="<cms:show k_page_link />">
-                    <img class="card-img-top" src="<cms:show cover_image />" style="height:190px;border-left:solid #0d6efd 5px;">
+                    <img class="card-img-top" src="<cms:show cover_image />" style="height:190px;border-left:solid #0dcaf0 5px;">
                     <div class="card-img-overlay bg-overlay">
                         <h4 class="card-title"><cms:show k_page_title /></h4>
                         <span class="badge bg-primary"><cms:show listen_content_type /></span>
@@ -391,6 +402,12 @@
 
         <div id="watch-m">
 
+            <a class="section-link-m" style="background-color:blueviolet;margin-top:5px !important;" href="<cms:link masterpage='watch.php' />">
+                <div>
+                    <h4 class="card-title">Watch</h4>
+                </div>
+            </a>
+
             <cms:pages masterpage="watch.php" folder=k_folder_name orderby='publish_date' order='desc' limit="4">
                 <!--get category-->
                 <cms:if k_page_foldertitle>
@@ -400,7 +417,7 @@
                 </cms:if>
 
                 <a class="card tile" style="display:block;height:190px;width:98% !important;margin:2px !important;border-radius:4px !important;" href="<cms:show k_page_link />">
-                    <img class="card-img-top" src="<cms:show cover_image />" style="height:190px;border-left:solid #0d6efd 5px;">
+                    <img class="card-img-top" src="<cms:show cover_image />" style="height:190px;border-left:solid blueviolet 5px;">
                     <div class="card-img-overlay bg-overlay">
                         <h4 class="card-title"><cms:show k_page_title /></h4>
                         <span class="badge bg-primary"><cms:show watch_content_type /></span>

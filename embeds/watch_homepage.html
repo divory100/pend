@@ -30,7 +30,7 @@
 
     <body>
         <div id="logo-banner" class="pagewide p-1 fixed-top">
-            <div class="container"><img src="assets/logo.jpg" height=60px></div>
+            <div class="container"><img src="<cms:show k_site_link />assets/logo.jpg" height=60px></div>
         </div>
         
         <!--Default navbar (top)-->
@@ -119,10 +119,10 @@
         <footer class="pend-navbar-m fixed-bottom mt-auto footer ">
             <div class="container">
                 <span style="display:float">   
-                    <a href="<cms:link masterpage='index.php' />"><img src="assets/home.png" width=40px height=40px></a>
-                    <a href="<cms:link masterpage='read.php' />"><img src="assets/read.png" width=40px height=40px></a>
-                    <a href="<cms:link masterpage='listen.php' />"><img src="assets/microphone.png" width=40px height=40px></a>
-                    <a href="<cms:link masterpage='watch.php' />"><img src="assets/watch.png" width=40px height=40px></a>
+                    <a href="<cms:link masterpage='index.php' />"><img src="<cms:show k_site_link />assets/home.png" width=40px height=40px></a>
+                    <a href="<cms:link masterpage='read.php' />"><img src="<cms:show k_site_link />assets/read.png" width=40px height=40px></a>
+                    <a href="<cms:link masterpage='listen.php' />"><img src="<cms:show k_site_link />assets/microphone.png" width=40px height=40px></a>
+                    <a href="<cms:link masterpage='watch.php' />"><img src="<cms:show k_site_link />assets/watch.png" width=40px height=40px></a>
                 </span>
             </div>
         </footer>

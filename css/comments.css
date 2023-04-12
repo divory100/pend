@@ -22,11 +22,17 @@
     background-color: rgb(207, 207, 207);
 }
 
-/*display two per line when enough space*/
+/*display two per line when enough space, and make submit button a better size for mobile*/
 @media (min-width: 1300px) {
     .comment {
         float:left;
         width: 49% !important;
+    }
+}
+
+@media (max-width: 1299px) {
+    #submit-btn {
+        width: 35%;
     }
 }
 

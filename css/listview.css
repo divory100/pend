@@ -13,6 +13,17 @@
     }
 }
 
+/*Makes tile font size smaller when mobile*/
+@media (max-width: 1300px) {
+    .tile h4 {
+        font-size: 16px;
+    }
+    
+    .tile p {
+        font-size: 12px;
+    }
+}
+
 /*Filtering Content*/
 .filter-options {
     margin-top:20px;

@@ -22,7 +22,7 @@
         <link rel="stylesheet" type="text/css" href="<cms:show k_site_link />css/home.css">
         <link rel="stylesheet" type="text/css" href="<cms:show k_site_link />css/tile.css">
 
-        <script src="js/utils.js"></script>
+        <script src="<cms:show k_site_link />js/utils.js"></script>
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

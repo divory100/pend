@@ -38,7 +38,17 @@ function applyListFilter() {
 
 function resetListFilter() {
     //strip parameters and redirect
-    window.location = window.location.protocol + '//' + window.location.host + window.location.pathname;
+    var contentType = '';
+    if ((window.location.pathname).includes('read')) {
+        contentType = 'read';
+    } else if ((window.location.pathname).includes('listen')) {
+        contentType = 'listen';
+    } else {
+        contentType = 'watch';
+    }
+
+    //IMPORTANT: for testing when pretty urls are NOT enabled, you will need to add '.php' onto the end of the url
+    window.location = window.location.protocol + '//' + window.location.host + '/' + contentType + '/';
 }
 
 

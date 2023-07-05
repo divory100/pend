@@ -1,14 +1,14 @@
 # Todo List
 - [x] home page html/css
-- [ ] add couchcms to home page tiles
+- [x] add couchcms to home page tiles
 - [x] sticky navbar
 - [x] bootstrap?
-- [ ] hosting: 1&1/ionos possible
+- [x] hosting: 1&1/ionos possible
 - [ ] variables for css to make it tidier (not necessary, add if there is time)
 - [x] articles list view
 - [x] podcasts list view
 - [x] photo/video list view
-- [ ] upload some real content
-- [ ] couch pretty urls (leave until very end)
+- [x] upload some real content
+- [x] couch pretty urls (leave until very end)
 - [ ] mobile site: use jquery to switch navbar on each page to the bottom and have symbols
-- [ ] comments
+- [x] comments
